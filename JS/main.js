@@ -2,6 +2,12 @@ const weatherBox = document.querySelector(".weatherBox");
 const API_KEY = "367636d16a48743eb5074f58249138c2";
 let tempList;
 
+/* 현재시간 업데이트 */
+function getTime() {
+  const time = new Date();
+  cur_time.textContent = `${time.getHours()}:${time.getMinutes()}`;
+}
+
 // 메인 컨텐츠 효과
 window.addEventListener("load", () => {
   //   console.log("test");
@@ -140,6 +146,8 @@ function displayWeather(data) {
   weatherIcon.src = `../img/weather_icon/${data.weather[0].icon}.png`;
   temp.innerHTML = mainTemp + "℃";
   region.innerHTML = data.name;
+
+  localStorage.weather = JSON.stringify(data);
 }
 
 function setTemperature(data) {
@@ -190,3 +198,5 @@ function loadItems() {
     .then((response) => response.json())
     .then((json) => json.items);
 }
+
+getTime();

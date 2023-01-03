@@ -24,9 +24,56 @@
       width: 95%;
       height: 85%;
       display: flex;
+      // background-color: black;
+
+      @function random_range($min, $max) {
+        $rand: random();
+        $random_range: $min + floor($rand * (($max - $min) + 1));
+        @return $random_range;
+      }
+
+      .snow.active {
+        $total: 200;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: white;
+        border-radius: 50%;
+        z-index: 100;
+
+        @for $i from 1 through $total {
+          $random-x: random(1000000) * 0.0001vw;
+          $random-offset: random_range(-100000, 100000) * 0.0001vw;
+          $random-x-end: $random-x + $random-offset;
+          $random-x-end-yoyo: $random-x + ($random-offset / 2);
+          $random-yoyo-time: random_range(30000, 80000) / 100000;
+          $random-yoyo-y: $random-yoyo-time * 100vh;
+          $random-scale: random(10000) * 0.0001;
+          $fall-duration: random_range(10, 30) * 1s;
+          $fall-delay: random(30) * -1s;
+
+          &:nth-child(#{$i}) {
+            opacity: random(10000) * 0.0001;
+            transform: translate($random-x, -10px) scale($random-scale);
+            animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
+          }
+
+          @keyframes fall-#{$i} {
+            #{percentage($random-yoyo-time)} {
+              transform: translate($random-x-end, $random-yoyo-y)
+                scale($random-scale);
+            }
+
+            to {
+              transform: translate($random-x-end-yoyo, 100vh)
+                scale($random-scale);
+            }
+          }
+        }
+      }
 
       .imgBox {
-        width: 60%;
+        width: 80%;
         // background-color: rgb(255, 244, 221);
         position: relative;
         display: flex;
@@ -40,35 +87,37 @@
           justify-content: center;
           align-items: center;
         }
-        .shape {
-          width: 450px;
-          height: 420px;
-          background: linear-gradient(
+        #shape {
+          width: 430px;
+          height: 410px;
+          /* background: linear-gradient(
             64.00916346799386deg,
-            rgb(143, 175, 194) 23.44140625%,
-            rgb(18, 32, 78) 79.84765625%
-          );
+            #c7e0ee 23.44140625%,
+            #83c6e2 79.84765625%
+          ); */
           animation: wave 8s ease-in-out infinite;
           position: absolute;
           margin-top: 35px;
+          margin-left: 20px;
           top: 0;
-          &:nth-of-type(2) {
-            width: 800px;
-            height: 800px;
-            position: absolute;
-            top: -300px;
-            left: -400px;
-            opacity: 0.1;
-            z-index: -1;
-          }
-          &:nth-of-type(3) {
-            width: 300px;
-            height: 300px;
-            position: absolute;
-            top: 350px;
-            right: -700px;
-            opacity: 0.1;
-            z-index: -1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .weatherImgBox {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+
+            img {
+              // max-width: 90%;
+              top: 0;
+              left: 0;
+              width: 100%;
+              max-width: 450px;
+            }
           }
         }
         @keyframes wave {
@@ -82,23 +131,6 @@
 
           25% {
             border-radius: 80% 27% 60% 36% / 32% 44% 52% 50%;
-          }
-        }
-
-        .weatherImgBox {
-          position: absolute;
-          margin: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 50px;
-
-          img {
-            // max-width: 90%;
-            top: 0;
-            left: 0;
-            width: 100%;
-            max-width: 450px;
           }
         }
       }

@@ -1,11 +1,81 @@
+let weatherData = JSON.parse(localStorage.weather);
+weather_des = weatherData.weather[0].description;
+weather_icon = weatherData.weather[0].icon;
+console.log(weatherData);
+const snow = document.querySelectorAll(".snow");
+
+function setText() {
+  const timeDate = new Date();
+  let apm = timeDate.getHours();
+  let hour = timeDate.getHours();
+  let mainTemp = Math.floor(weatherData.main.temp);
+
+  day.textContent = `${timeDate.getMonth() + 1}월 ${timeDate.getDate()}일`;
+
+  if (apm < 12) {
+    apm = "오전";
+  } else {
+    apm = "오후";
+    hour = hour - 12;
+  }
+  time.textContent = `${apm} ${hour}:${timeDate.getMinutes()}`;
+
+  region.textContent = weatherData.name;
+
+  temp.textContent = mainTemp + "℃";
+}
+
+function setWeatherIcon() {
+  // w_Icon.src = `../img/Big_wea_Img/13d.png`;
+  w_Icon.src = `../img/Big_wea_Img/${weather_icon}.png`;
+}
+function filterWeather() {
+  if (weather_des == "clear sky" || weather_des == "few clouds") {
+    const color1 = "#abe9f8";
+    const color2 = "#52bae4";
+    shape.style.backgroundImage = `linear-gradient(64.00916346799386deg, ${color1}, ${color2})`;
+  }
+
+  if (
+    weather_des == "scattered clouds" ||
+    weather_des == "broken clouds" ||
+    weather_des == "mist" ||
+    weather_des == "thunderstorm"
+  ) {
+    const color1 = "#93b6ca";
+    const color2 = "#4a8daa";
+    shape.style.backgroundImage = `linear-gradient(64.00916346799386deg, ${color1}, ${color2})`;
+  }
+  if (weather_des == "shower rain" || weather_des == "rain") {
+    makeItRain();
+    const color1 = "#8FAFC2";
+    const color2 = "#12204E";
+    shape.style.backgroundImage = `linear-gradient(64.00916346799386deg, ${color1}, ${color2})`;
+  }
+  if (weather_des == "snow") {
+    const color1 = "#c7e0ee";
+    const color2 = "#83c6e2";
+    shape.style.backgroundImage = `linear-gradient(64.00916346799386deg, ${color1}, ${color2})`;
+    snow.forEach((item) => {
+      item.classList.add("active");
+    });
+  }
+}
+
 window.addEventListener("load", () => {
   //   console.log("test");
   const mainBox = document.querySelector(".mainBox");
   console.log(mainBox);
   mainBox.style.opacity = 1;
+
+  filterWeather();
+  setWeatherIcon();
+  setText();
+
+  setInterval(setText, 5000);
 });
 
-var makeItRain = function () {
+function makeItRain() {
   //clear out everything
   $(".rain").empty();
 
@@ -62,6 +132,4 @@ var makeItRain = function () {
 
   $(".rain.front-row").append(drops);
   $(".rain.back-row").append(backDrops);
-};
-
-makeItRain(); /* 비오는 조건일때 실행하도록 */
+}

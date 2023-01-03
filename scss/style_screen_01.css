@@ -65,7 +65,7 @@
 .mainBox .StyleTitle .container .wrap-slider .js-slider article img:hover {
   transform: scale(1.15);
 }
-.mainBox .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(2), .mainBox .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(4) {
+.mainBox .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(2), .mainBox .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(4), .mainBox .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(6) {
   transform: translateY(30%);
 }
 .mainBox .StyleTitle .container .wrap-slider .js-slider article:hover {
