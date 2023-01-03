@@ -1,128 +1,160 @@
 @import "./main.css";
 @import "./style_screen_01.css";
 
-
 .movebox {
-    width: 100%;
-    position: absolute;
-    top: 30%;
+  width: 90%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    .left {
-        width: 50%;
-        float: left;
-        // height: 100%;
-        // display: inline-block;
-        // position: absolute;
+  .left {
+    width: 45%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .StyleimgsBoxleft {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-        .StyleimgsBoxleft {
-            //width: 50%;
-            position: relative;
-            display: flex;
-            text-align: center;
-            //width: 100%;
-
-            .wrap {
-                position: absolute;
-                top: 50%;
-                //transform: translate(-100%, 15%);
-                margin: 0 auto;
-                //border: 2px solid #f00;
-                //box-sizing: border-box;
-                //overflow: hidden;
-                padding-left: 50px;
-                display: flex;
-
-
-                article {
-                    float: left;
-                    padding: 0 10px;
-
-                    img {
-                        border-radius: 20px;
-                        display: block;
-                        width: 300px;
-                        height: 300px;
-                        object-fit: cover;
-                    }
-
-                    &:nth-of-type(2),
-                    &:nth-of-type(4) {
-                        //position: absolute;
-                        transform: translateY(30%);
-                    }
-                }
-            }
-        }
+      img {
+        border-radius: 20px;
+        width: 350px;
+        height: 350px;
+        max-width: 100%;
+        object-fit: cover;
+        margin-right: 50px;
+      }
     }
+  }
 
+  .right {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .right {
-        width: 50%;
+    .StyleimgsBoxright {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+
+      .subheading {
+        height: 40%;
+        margin-top: 30px;
+        width: 95%;
+        .first_textBox {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          a:link,
+          a:visited,
+          a:hover,
+          a:active {
+            color: rgb(65, 65, 65);
+          }
+
+          .cody_title {
+            font-size: 24px;
+            font-weight: bold;
+          }
+          /* 
+          i {
+            margin-right: 10px;
+          } */
+        }
+        .p1 {
+          font-weight: 700;
+          font-size: 25px;
+        }
+
+        .p2 {
+          padding-right: 50px;
+        }
+      }
+
+      .miniImg {
+        width: 100%;
+        height: 60%;
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        //position: relative;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .swiper {
+          width: 100%;
+          height: 100%;
 
-        float: right;
-
-        .StyleimgsBoxright {
-            //width: 50%;
-            //position: absolute;
-
-            .subheading {
-
-
-                .p1 {
-                    font-weight: 700;
-                    font-size: 25px;
-                }
-
-                img {
-                    width: 5%;
-                    transform: translate(300px, -45px);
-                }
-
-                .p2 {
-                    padding-right: 50px;
-                }
-            }
-
-            .miniimg {
-                padding-right: 50px;
-
-                .wrap02 {
-                    display: flex;
-                    justify-content: space-between;
-                    //transform: translate(79px, 10px);
-                }
-
-                article {
-                    -webkit-filter: grayscale(100%);
-                    img {
-                        border-radius: 10px;
-                        display: block;
-                        width: 110px;
-                        height: 110px;
-                        object-fit: cover;
-
-                        // -webkit-filter: grayscale(100%);
-                        // filter: gray;
-                    }
-
-                    // img:hover {
-                    //     -webkit-filter: grayscale(0%);
-                    //     filter: none;
-                    // }
-                }
-
-                article:hover {
-                    -webkit-filter: grayscale(0%);
-                    //filter: gray;
-                    //filter: none;
-                }
-
-            }
+          .swiper-wrapper {
+            display: flex;
+            align-items: center;
+          }
         }
 
+        .swiper-button-next,
+        .swiper-button-prev {
+          z-index: 10;
+          right: 0;
+
+          i {
+            width: 15px;
+            height: 15px;
+            color: rgb(131, 131, 131);
+          }
+        }
+
+        .swiper-button-prev {
+          left: 0;
+          transform: translateX(-75%);
+        }
+        .swiper-button-next {
+          right: 0;
+          transform: translateX(75%);
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+          display: none;
+        }
+
+        .swiper-slide {
+          height: 120px;
+          text-align: center;
+          font-size: 18px;
+          width: 120px;
+          border-radius: 10px;
+          margin-right: 20px;
+
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            max-width: 120px;
+          }
+        }
+      }
     }
+  }
 }

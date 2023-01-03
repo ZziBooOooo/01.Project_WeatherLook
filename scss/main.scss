@@ -76,7 +76,7 @@ body {
   }
 
   .weatherBox {
-    width: 160px;
+    width: 180px;
     height: 65px;
     margin-right: 2.5%;
     background-color: rgba(0, 0, 0, 0.452);
@@ -88,6 +88,8 @@ body {
     top: 10%;
     opacity: 0;
     cursor: pointer;
+    border: none;
+    padding: 5px;
     .clickText {
       display: inline-block;
       color: white;
@@ -110,22 +112,33 @@ body {
     .weatherBox_secondText {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
+      width: 90%;
+      /*   background-color: red; */
 
-      transform: translateY(-10px);
+      /*  transform: translateY(-5px); */
 
       p {
         margin: 0;
-        transform: translateY(10px);
+        width: 40px;
+        height: 40px;
         img {
-          width: 50px;
+          width: 100%;
         }
       }
 
       span {
         display: inline-block;
         color: white;
-        font-weight: bold;
+        /* font-weight: bold; */
+      }
+
+      & span:nth-of-type(1) {
+        margin-right: 5px;
+      }
+      #region {
+        // width: 60%;
+        font-size: 13px;
       }
     }
   }

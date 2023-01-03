@@ -31,7 +31,7 @@
   margin-bottom: 50px;
   font-weight: bold;
 }
-.mainBox #main_Sec1 .genderBox #woman {
+.mainBox #main_Sec1 .genderBox #female {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -41,7 +41,7 @@
   margin-right: 10px;
   cursor: pointer;
 }
-.mainBox #main_Sec1 .genderBox #man {
+.mainBox #main_Sec1 .genderBox #male {
   width: 50%;
   display: flex;
   flex-direction: column;

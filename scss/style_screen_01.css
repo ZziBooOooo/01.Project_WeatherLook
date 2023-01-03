@@ -1,10 +1,21 @@
 @import "./main.css";
+.mainBox button {
+  width: 200px;
+  position: absolute;
+  right: 0;
+  top: 80px;
+  margin-right: 45px;
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  font-weight: 900;
+}
 .mainBox .StyleTitle {
+  width: 100%;
   position: absolute;
   text-align: center;
 }
 .mainBox .StyleTitle .titletext {
-  position: relative;
   margin: 0 auto;
   width: 100%;
   padding-top: 50px;
@@ -15,42 +26,48 @@
   font-size: 25px;
   font-weight: 900;
 }
-.mainBox .StyleTitle .titletext button {
-  background-color: transparent;
-  border: none;
-  font-size: 15px;
+.mainBox .StyleTitle .container {
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  font-weight: 900;
-  transform: translate(45vh, -5vh);
+  height: 100%;
+  align-items: center;
 }
-.mainBox .StyleTitle .StyleimgsBox {
+.mainBox .StyleTitle .container .wrap-slider {
+  width: 100%;
+  overflow: hidden;
+  height: 460px;
   position: relative;
-  display: flex;
-  text-align: center;
 }
-.mainBox .StyleTitle .StyleimgsBox .wrap {
+.mainBox .StyleTitle .container .wrap-slider .js-slider {
+  padding: 0;
+  margin: 0;
+  list-style: none;
   position: absolute;
-  top: 50%;
-  transform: translate(-41%, 25%);
-  margin: 0 auto;
-  border: 2px solid #f00;
-  box-sizing: border-box;
-  padding-top: 10px;
+  left: 100%;
+  top: 40%;
+  transform: translate(0, -50%);
   display: flex;
+  flex-direction: row;
+  will-change: transform;
 }
-.mainBox .StyleTitle .StyleimgsBox .wrap article {
+.mainBox .StyleTitle .container .wrap-slider .js-slider article {
+  position: relative;
   float: left;
   padding: 0 10px;
-  -webkit-filter: grayscale(100%);
 }
-.mainBox .StyleTitle .StyleimgsBox .wrap article img {
+.mainBox .StyleTitle .container .wrap-slider .js-slider article img {
   border-radius: 20px;
   display: block;
-  width: 160px;
+  width: 220px;
+  transition: 1s;
 }
-.mainBox .StyleTitle .StyleimgsBox .wrap article:nth-of-type(2), .mainBox .StyleTitle .StyleimgsBox .wrap article:nth-of-type(4) {
+.mainBox .StyleTitle .container .wrap-slider .js-slider article img:hover {
+  transform: scale(1.15);
+}
+.mainBox .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(2), .mainBox .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(4) {
   transform: translateY(30%);
 }
-.mainBox .StyleTitle .StyleimgsBox .wrap article:hover {
+.mainBox .StyleTitle .container .wrap-slider .js-slider article:hover {
   -webkit-filter: grayscale(0%);
 }/*# sourceMappingURL=style_screen_01.css.map */

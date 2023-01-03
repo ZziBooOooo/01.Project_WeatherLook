@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../scss/main.css" />
+    <script
+      src="https://kit.fontawesome.com/497450481c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../JS/main.js" defer></script>
+    <script src="../JS/lookstyle.js" defer></script>
+    <link rel="stylesheet" href="../scss/lookstyle.css" />
+  </head>
+
+  <body>
+    <div class="logoImgBox">
+      <img src="../img/logo3.png" class="logo" alt="" />
+    </div>
+
+    <div class="mainBox">
+      <!-- <button onclick="location.href='./main.html'"></button> -->
+
+      <section id="main_Sec1">
+        <div class="topBox">
+          <p>11:21</p>
+          <div class="topBox_right">
+            <p>KT</p>
+            <p>5G</p>
+            <i class="fa-solid fa-battery-three-quarters"></i>
+          </div>
+        </div>
+
+        <button onclick="location.href='./main.html'">
+          <span>HOME</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <!-- selection.scss -->
+        <div class="titleBox">
+          <div class="titletext">
+            <p>스타일을 선택해주세요</p>
+          </div>
+        </div>
+
+        <div class="StyleSelection">
+          <div class="styleBox modernBox">
+            <div class="shape modernShape" id="modern"></div>
+            <p id="modern">Modern</p>
+          </div>
+          <div class="styleBox streetBox">
+            <div class="shape streetShape" id="street"></div>
+            <p id="street">Street</p>
+          </div>
+          <div class="styleBox casualBox">
+            <div class="shape casualShape" id="casual"></div>
+            <p id="casual">Casual</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

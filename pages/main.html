@@ -35,15 +35,15 @@
           </div>
         </div>
 
-        <div class="weatherBox">
+        <button class="weatherBox" onclick="location.href='./weather.html'">
           <span class="clickText">Click Me!</span>
 
           <div class="weatherBox_secondText">
-            <p><img src="../img/03d.png" alt="" /></p>
-            <span>강남</span>
-            <span>-4℃</span>
+            <p><img src="../img/03d.png" id="weatherIcon" alt="" /></p>
+            <span id="region">강남</span>
+            <span id="temp">-4℃</span>
           </div>
-        </div>
+        </button>
 
         <div class="mainContentBox">
           <div class="bottomBox">
@@ -59,7 +59,7 @@
               </div>
               <p id="smallLogoText">Weather Look</p>
             </div>
-            <button onclick="location.href='./gender.html'">
+            <button onclick="location.href='./gender.html'" id="testBtn">
               <span>Go Test </span>
               <i class="fa-solid fa-arrow-right"></i>
             </button>

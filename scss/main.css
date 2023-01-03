@@ -66,7 +66,7 @@ body {
   height: 80%;
 }
 .mainBox .weatherBox {
-  width: 160px;
+  width: 180px;
   height: 65px;
   margin-right: 2.5%;
   background-color: rgba(0, 0, 0, 0.452);
@@ -78,6 +78,8 @@ body {
   top: 10%;
   opacity: 0;
   cursor: pointer;
+  border: none;
+  padding: 5px;
 }
 .mainBox .weatherBox .clickText {
   display: inline-block;
@@ -112,20 +114,29 @@ body {
 .mainBox .weatherBox .weatherBox_secondText {
   display: flex;
   align-items: center;
-  justify-content: center;
-  transform: translateY(-10px);
+  justify-content: space-around;
+  width: 90%;
+  /*   background-color: red; */
+  /*  transform: translateY(-5px); */
 }
 .mainBox .weatherBox .weatherBox_secondText p {
   margin: 0;
-  transform: translateY(10px);
+  width: 40px;
+  height: 40px;
 }
 .mainBox .weatherBox .weatherBox_secondText p img {
-  width: 50px;
+  width: 100%;
 }
 .mainBox .weatherBox .weatherBox_secondText span {
   display: inline-block;
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
+}
+.mainBox .weatherBox .weatherBox_secondText span:nth-of-type(1) {
+  margin-right: 5px;
+}
+.mainBox .weatherBox .weatherBox_secondText #region {
+  font-size: 13px;
 }
 .mainBox .bottomBox {
   display: flex;

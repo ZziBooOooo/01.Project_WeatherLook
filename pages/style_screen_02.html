@@ -12,7 +12,12 @@
   <link rel="stylesheet" href="../scss/main.css" />
   <script src="https://kit.fontawesome.com/497450481c.js" crossorigin="anonymous"></script>
   <script src="../JS/main.js"></script>
-  <link rel="stylesheet" href="../scss/main.css">
+  <script src="../JS/detail_Image.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
   <link rel="stylesheet" href="../scss/style_screen_01.css">
   <link rel="stylesheet" href="../scss/style_screen_02.css">
 </head>
@@ -54,9 +59,7 @@
       <div class="movebox">
         <div class="left">
           <div class="StyleimgsBoxleft">
-            <div class="wrap">
-              <article><a href="#"><img src="../imgs/street/men/s_0_1.jpg"></a></article>
-            </div>
+              <p><img src="../img/s_0_1.jpg" id="detailImg"></p>
           </div>
         </div>
 
@@ -64,26 +67,47 @@
         <div class="right">
           <div class="StyleimgsBoxright">
             <div class="subheading">
-              <P class="p1">윈터 캐주얼</P>
-              <a href="#" src="공유주소적으삼"><img src="../imgs/share.png"></a>
-              <P class="p2">당신을 위한 추천코디예요~ 유후
-                이게 내꺼라고 생각한다면
-                당장 공유해</P>
-            </div>
+              <div class="first_textBox">
+                <p class="cody_title">윈터 캐주얼</p>
+                <a href="#" src="공유주소적으삼">
+                  <i class="fa-solid fa-share"></i>
+                </a>
 
-            <div>
-              <div class="miniimg">
-                <div class="wrap02">
-                  <article><a href="#"><img src="../imgs/street/men/s_0_1.jpg"></a></article>
-                  <article><a href="#"><img src="../imgs/street/men/s_0_1.jpg"></a></article>
-                  <article><a href="#"><img src="../imgs/street/men/s_0_1.jpg"></a></article>
-                </div>
               </div>
+              
+              <p class="cody_text">텍스트 정해야됨
+                <br>
+                텍스트 정해야됨
+              </p>
             </div>
+
+ 
+              <div class="miniImg">
+
+
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <!-- <div class="swiper-slide">
+                        <img src="../img/s_0_1.jpg" alt="">
+                      </div>/ -->
+                     
+                    </div>
+    
+                  </div>
+                  <div class="swiper-button-next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </div>
+
+                 <!--  <article><a href="#"><img src="../img/s_0_1.jpg"></a></article>
+                  <article><a href="#"><img src="../img/s_0_1.jpg"></a></article>
+                  <article><a href="#"><img src="../img/s_0_1.jpg"></a></article> -->
+ 
+              </div>
+
           </div>
-
-
-
         </div>
       </div>
 

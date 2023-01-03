@@ -1,0 +1,180 @@
+@import "./main.css";
+@import "./style_screen_01.css";
+
+#main_Sec1 {
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: 900;
+    top: 12.5%;
+    right: 0;
+    margin-right: 20px;
+    position: absolute;
+    cursor: pointer;
+  }
+}
+.titleBox {
+  position: absolute;
+  // display: flex;
+  text-align: center;
+
+  .titletext {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    //right: 50%;
+    padding-top: 50px;
+    width: 100%;
+    //display: flex;
+    //justify-content: center;
+
+    p {
+      width: 100%;
+      font-size: 25px;
+      font-weight: 900;
+    }
+  }
+}
+.StyleSelection {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: 80%;
+
+  .styleBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    .shape {
+      max-width: 90%;
+      height: 230px;
+      min-width: 225px;
+      min-height: 200px;
+      cursor: pointer;
+    }
+
+    .modernShape {
+      background: linear-gradient(
+        64.00916346799386deg,
+        rgb(241, 155, 205) 23.44140625%,
+        rgb(231, 92, 162) 79.84765625%
+      );
+      animation: wave 8s ease-in-out infinite;
+      transform: translateY(-50px);
+      transition: 0.5s;
+
+      &:hover {
+        transform: translateY(-50px) scale(1.2);
+      }
+    }
+    .streetShape {
+      background: linear-gradient(
+        64.00916346799386deg,
+        rgb(149, 207, 178) 23.44140625%,
+        rgb(94, 196, 94) 79.84765625%
+      );
+      animation: wave2 10s ease-in-out infinite;
+      transform: translateY(10px);
+      transition: 0.5s;
+
+      &:hover {
+        transform: translateY(10px) scale(1.2);
+      }
+    }
+    .casualShape {
+      background: linear-gradient(
+        64.00916346799386deg,
+        rgba(235, 206, 126, 0.842) 23.44140625%,
+        rgb(238, 204, 55) 79.84765625%
+      );
+      animation: wave3 9s ease-in-out infinite;
+      transform: translateY(-50px);
+      transition: 0.5s;
+
+      &:hover {
+        transform: translateY(-50px) scale(1.2);
+      }
+    }
+
+    @keyframes wave {
+      0%,
+      100% {
+        border-radius: 70% 30% 72% 28% / 27% 61% 39% 73%;
+      }
+      50% {
+        border-radius: 77% 23% 54% 46% / 40% 38% 62% 60%;
+      }
+
+      25% {
+        border-radius: 80% 27% 60% 36% / 32% 44% 52% 50%;
+      }
+    }
+
+    @keyframes wave2 {
+      0%,
+      100% {
+        border-radius: 60% 40% 62% 38% / 27% 61% 39% 73%;
+      }
+      50% {
+        border-radius: 67% 33% 54% 46% / 40% 38% 62% 60%;
+      }
+
+      25% {
+        border-radius: 75% 36% 60% 40% / 32% 44% 52% 70%;
+      }
+    }
+
+    @keyframes wave3 {
+      0%,
+      100% {
+        border-radius: 70% 30% 72% 28% / 27% 61% 39% 73%;
+      }
+      75% {
+        border-radius: 72% 24% 62% 38% / 37% 41% 49% 63%;
+      }
+      50% {
+        border-radius: 77% 23% 54% 46% / 40% 38% 62% 60%;
+      }
+
+      25% {
+        border-radius: 80% 27% 60% 36% / 32% 44% 52% 50%;
+      }
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 24px;
+      position: absolute;
+      color: rgb(245, 245, 245);
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    #modern,
+    #casual {
+      transform: translateY(-50px);
+      transition: 0.5s;
+    }
+  }
+}
+.modernBox:hover {
+  #modern {
+    transform: translateY(-50px) scale(1.1);
+  }
+}
+.streetBox:hover {
+  #street {
+    transform: scale(1.1);
+  }
+}
+.casualBox:hover {
+  #casual {
+    transform: translateY(-50px) scale(1.1);
+  }
+}
