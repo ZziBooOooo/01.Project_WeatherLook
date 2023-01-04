@@ -5,7 +5,14 @@ let tempList;
 /* 현재시간 업데이트 */
 function getTime() {
   const time = new Date();
-  cur_time.textContent = `${time.getHours()}:${time.getMinutes()}`;
+  console.log(time.getMinutes());
+  let minute = time.getMinutes();
+  if (minute < 10) {
+    console.log("8");
+    cur_time.textContent = `${time.getHours()}:0${time.getMinutes()}`;
+  } else {
+    cur_time.textContent = `${time.getHours()}:${time.getMinutes()}`;
+  }
 }
 
 // 메인 컨텐츠 효과

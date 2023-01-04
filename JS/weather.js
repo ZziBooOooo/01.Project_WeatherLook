@@ -18,7 +18,13 @@ function setText() {
     apm = "오후";
     hour = hour - 12;
   }
-  time.textContent = `${apm} ${hour}:${timeDate.getMinutes()}`;
+
+  let minute = timeDate.getMinutes();
+  if (minute < 10) {
+    time.textContent = `${apm} ${hour}:0${minute}`;
+  } else {
+    time.textContent = `${apm} ${hour}:${minute}`;
+  }
 
   region.textContent = weatherData.name;
 
@@ -132,4 +138,71 @@ function makeItRain() {
 
   $(".rain.front-row").append(drops);
   $(".rain.back-row").append(backDrops);
+}
+
+function getTime() {
+  const time = new Date();
+  let minute = time.getMinutes();
+  if (minute < 10) {
+    cur_time.textContent = `${time.getHours()}:0${time.getMinutes()}`;
+  } else {
+    cur_time.textContent = `${time.getHours()}:${time.getMinutes()}`;
+  }
+}
+
+setInterval(getTime, 1000);
+
+let cur_weather = JSON.parse(localStorage.getItem("weather"));
+cur_weather_des = cur_weather.weather[0].description;
+
+let texts = {
+  text: [
+    {
+      des: "clear sky",
+      t: "맑은날",
+    },
+    {
+      des: "few clouds",
+      t: "적은 구름",
+    },
+    {
+      des: "scattered clouds",
+      t: "많은 구름",
+    },
+    {
+      des: "broken clouds",
+      t: "깨진구름이 뭔소리고",
+    },
+    {
+      des: "shower rain",
+      t: "샤워레인..?",
+    },
+    {
+      des: "rain",
+      t: "비",
+    },
+    {
+      des: "thunderstorm",
+      t: "천둥번개",
+    },
+    {
+      des: "snow",
+      t: "눈",
+    },
+    {
+      des: "mist",
+      t: "안개",
+    },
+  ],
+};
+let weather_text = texts.text;
+console.log(weather_text);
+
+for (let i = 0; i < weather_text.length; i++) {
+  if (cur_weather_des == weather_text[i].des) {
+    console.log(i);
+    console.log(cur_weather_des);
+    console.log(weather_text[i].des);
+    weather_des.textContent = weather_text[i].t;
+  }
 }

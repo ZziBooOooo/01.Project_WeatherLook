@@ -6,7 +6,8 @@
   font-weight: bold;
 }
 .mainBox #main_Sec1 .genderBox {
-  width: 90%;
+  width: 70%;
+  min-width: 650px;
   height: 85%;
   display: flex;
   margin-top: 25px;
@@ -14,7 +15,7 @@
   align-items: center;
 }
 .mainBox #main_Sec1 .genderBox img {
-  max-width: 300px;
+  max-width: 320px;
   width: 100%;
   border-radius: 18px;
 }
@@ -24,12 +25,11 @@
 }
 .mainBox #main_Sec1 .genderBox #female {
   width: 50%;
-  height: 85%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-left: 50px;
   margin-right: 10px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -40,6 +40,7 @@
 .mainBox #main_Sec1 .genderBox #female p {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 .mainBox #main_Sec1 .genderBox #female .wwgif {
   position: absolute;
@@ -50,13 +51,12 @@
 }
 .mainBox #main_Sec1 .genderBox #male {
   width: 50%;
-  height: 85%;
+  height: 90%;
   display: flex;
+  margin-left: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-left: 50px;
-  margin-right: 10px;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;

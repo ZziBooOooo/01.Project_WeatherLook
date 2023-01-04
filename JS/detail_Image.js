@@ -4,6 +4,7 @@ let clickId = idValue.slice(1) - 1;
 let img_src = styleList[clickId].image.slice(5);
 const StyleimgsBoxleft = document.querySelector(".StyleimgsBoxleft");
 const codyTitle = document.querySelector(".cody_title");
+const codyText = document.querySelector(".cody_text");
 
 detailImg.src = `../img/Cody${img_src}`;
 
@@ -56,21 +57,13 @@ imgArr.forEach((img) => {
       arr.push(foundPos);
       pos = foundPos + 1;
     }
-    /*     console.log(imgSrc);
-    console.log(arr);
-    console.log(imgSrc.slice(arr[4])); */
     let test = imgSrc.slice(arr[4]);
 
     StyleimgsBoxleft.innerHTML = ` <div class="swiper-slide">
     <img src="../img/Cody/${test}" alt="" >
     </div>`;
 
-    /*     console.log(e.target.id);
-    console.log(styleList); */
-
     styleList.forEach((list, key) => {
-      console.log(list);
-      console.log(key);
       if (key == e.target.id) {
         codyTitle.textContent = list.title;
       }
@@ -81,10 +74,56 @@ imgArr.forEach((img) => {
 
 function getTime() {
   const time = new Date();
-  cur_time.textContent = `${time.getHours()}:${time.getMinutes()}`;
+  let minute = time.getMinutes();
+  if (minute < 10) {
+    console.log("8");
+    cur_time.textContent = `${time.getHours()}:0${time.getMinutes()}`;
+  } else {
+    cur_time.textContent = `${time.getHours()}:${time.getMinutes()}`;
+  }
 }
 
 setInterval(getTime, 1000);
 
 const mainBox = document.querySelector(".mainBox");
 mainBox.style.opacity = 1;
+
+console.log(styleList);
+
+let texts = {
+  text: [
+    {
+      temp: "0도 이하",
+      t: "0도 이하 텍스트",
+    },
+    {
+      temp: "1도 이상 6도 이하",
+      t: "1도 이상 6도 이하 텍스트",
+    },
+    {
+      temp: "7도 이상 11도 이하",
+      t: "7도 이상 11도 이하 텍스트",
+    },
+    {
+      temp: "17도 이상 22도 이하",
+      t: "17도 이상 22도 이하 텍스트",
+    },
+    {
+      temp: "23도 이상 27도 이하",
+      t: "23도 이상 27도 이하 텍스트",
+    },
+    {
+      temp: "28도 이상",
+      t: "28도 이상 텍스트",
+    },
+  ],
+};
+let weather_text = texts.text;
+console.log(texts.text);
+
+for (let i = 0; i < weather_text.length; i++) {
+  if (styleList[0].temp == weather_text[i].temp) {
+    console.log("ji");
+    codyText.textContent = weather_text[i].t;
+  }
+}

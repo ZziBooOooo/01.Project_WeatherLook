@@ -8,10 +8,35 @@ body {
   box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
   color: rgb(51, 51, 51);
+  background-color: rgb(53, 53, 53);
   // background-color: rgb(253, 237, 231);
   // background-image: url("../img/bg/2.png");
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+  #gradient {
+    width: 1000px;
+    height: 800px;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    bottom: -400px;
+    left: -200px;
+    border-radius: 60%;
+  }
+
+  #gradient2 {
+    width: 1000px;
+    height: 800px;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    top: -400px;
+    right: -300px;
+    border-radius: 60%;
+  }
 }
 .logo {
   width: 100px;
@@ -31,6 +56,7 @@ body {
   border-radius: 20px;
   background-color: white;
   opacity: 0;
+  z-index: 20;
 
   #main_Sec1 {
     height: 100%;
