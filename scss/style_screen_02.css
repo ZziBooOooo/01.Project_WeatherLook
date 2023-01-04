@@ -134,4 +134,8 @@
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 120px;
+  transition: 0.5s;
+}
+.movebox .right .StyleimgsBoxright .miniImg .swiper-slide img:hover {
+  transform: scale(1.05);
 }/*# sourceMappingURL=style_screen_02.css.map */

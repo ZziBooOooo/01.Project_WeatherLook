@@ -1,121 +1,99 @@
 .mainBox {
-    #main_Sec1 {
-        position: relative;
+  #main_Sec1 {
+    position: relative;
 
-        #iBox {
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin: 50px 20px;
-            background-color: transparent;
-            border: none;
-
-            cursor: pointer;
-
-            i {
-                font-size: 20px;
-            }
-        }
-
-        #genderText {
-            font-size: 30px;
-            font-weight: bold;
-        }
-
-        .genderBox {
-            width: 90%;
-            height: 85%;
-            display: flex;
-            margin-top: 25px;
-            justify-content: center;
-            align-items: center;
-
-
-            img {
-                max-width: 300px;
-                width: 100%;
-                border-radius: 18px;
-
-            }
-
-            .genderValue {
-                margin-top: 50px;
-                font-weight: bold;
-            }
-
-            #female {
-                width: 50%;
-                height: 85%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                margin-left: 50px;
-                margin-right: 10px;
-                object-fit: cover;
-                cursor: pointer;
-                position: relative;
-                -webkit-filter: grayscale(100%);
-
-                p {
-                    display: flex;
-                    justify-content: center;
-                }
-
-                .wwgif {
-                    position: absolute;
-                    top: 0;
-                    //left: 0;
-                }
-
-            }
-
-            #female:hover {
-                -webkit-filter: grayscale(0%);
-            }
-
-            #male {
-                width: 50%;
-                height: 85%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                margin-left: 50px;
-                margin-right: 10px;
-                object-fit: cover;
-                cursor: pointer;
-                position: relative;
-                -webkit-filter: grayscale(100%);
-                transition: 0.2s;
-
-                .wwgif {
-                    position: absolute;
-                    top: 0;
-                    margin-left: -157px;
-                    //left: 0;
-                }
-            }
-
-            #male:hover {
-                -webkit-filter: grayscale(0%);
-                transition: 0.2s;
-            }
-
-
-            .static:hover {
-                opacity: 0;
-                -webkit-filter: grayscale(0%);
-            }
-        }
-
-        .genderBox:hover {
-            -webkit-filter: grayscale(0%);
-        }
-
+    #genderText {
+      font-size: 30px;
+      font-weight: bold;
     }
 
+    .genderBox {
+      width: 90%;
+      height: 85%;
+      display: flex;
+      margin-top: 25px;
+      justify-content: center;
+      align-items: center;
 
+      img {
+        max-width: 300px;
+        width: 100%;
+        border-radius: 18px;
+      }
+
+      .genderValue {
+        margin-top: 50px;
+        font-weight: bold;
+      }
+
+      #female {
+        width: 50%;
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-right: 10px;
+        object-fit: cover;
+        cursor: pointer;
+        position: relative;
+        -webkit-filter: grayscale(100%);
+
+        p {
+          display: flex;
+          justify-content: center;
+        }
+
+        .wwgif {
+          position: absolute;
+          top: 0;
+          //left: 0;
+        }
+      }
+
+      #female:hover {
+        -webkit-filter: grayscale(0%);
+      }
+
+      #male {
+        width: 50%;
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-right: 10px;
+        object-fit: cover;
+        cursor: pointer;
+        position: relative;
+        -webkit-filter: grayscale(100%);
+        transition: 0.2s;
+
+        .wwgif {
+          position: absolute;
+          top: 0;
+          margin-left: -157px;
+          //left: 0;
+        }
+      }
+
+      #male:hover {
+        -webkit-filter: grayscale(0%);
+        transition: 0.2s;
+      }
+
+      .static:hover {
+        opacity: 0;
+        -webkit-filter: grayscale(0%);
+      }
+    }
+
+    .genderBox:hover {
+      -webkit-filter: grayscale(0%);
+    }
+  }
 }
 
 // div.femalebox {

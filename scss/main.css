@@ -17,6 +17,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  cursor: pointer;
 }
 
 .mainBox {
@@ -37,6 +38,20 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
+}
+.mainBox #main_Sec1 #iBox {
+  width: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 85px 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+.mainBox #main_Sec1 #iBox i {
+  font-size: 20px;
 }
 .mainBox .topBox {
   margin-top: 10px;

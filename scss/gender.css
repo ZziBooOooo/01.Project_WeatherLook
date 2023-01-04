@@ -1,18 +1,6 @@
 .mainBox #main_Sec1 {
   position: relative;
 }
-.mainBox #main_Sec1 #iBox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 50px 20px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-.mainBox #main_Sec1 #iBox i {
-  font-size: 20px;
-}
 .mainBox #main_Sec1 #genderText {
   font-size: 30px;
   font-weight: bold;

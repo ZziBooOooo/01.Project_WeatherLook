@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../scss/main.css" />
   <script src="https://kit.fontawesome.com/497450481c.js" crossorigin="anonymous"></script>
-  <script src="../JS/main.js"></script>
+<!--   <script src="../JS/main.js"></script> -->
   <script src="../JS/detail_Image.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <link
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-  <div class="logoImgBox">
+  <div class="logoImgBox" onclick="location.href='./main.html'">
     <img src="../img/logo3.png" class="logo" alt="" />
   </div>
 
@@ -31,8 +31,12 @@
     <!-- <button onclick="location.href='./main.html'"></button> -->
 
     <section id="main_Sec1">
+      <button id="iBox" onclick="location.href='./style_screen_01.html'">
+        <!-- <i class="fa-solid fa-chevron-left"></i> -->
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
       <div class="topBox">
-        <p>11:21</p>
+        <p id="cur_time">11:21</p>
         <div class="topBox_right">
           <p>KT</p>
           <p>5G</p>
@@ -46,10 +50,9 @@
 
         <div class="titletext">
           <P>Modern Style</P>
-          <button onclick="location.href='./main.html'">
-            <span>HOME</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </button>
+<!--           <button onclick="location.href='./main.html'">
+            <i class="fa-solid fa-house"></i>
+          </button> -->
         </div>
 
       </div>
