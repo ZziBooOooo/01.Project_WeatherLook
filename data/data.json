@@ -1,6 +1,7 @@
 {
   "items": [
     {
+      "title": "따뜻한 겨울",
       "lookStyle": "modern",
       "gender": "female",
       "image": "./img/modern/women/w_m_0_1.jpg",
@@ -28,6 +29,12 @@
       "lookStyle": "modern",
       "gender": "female",
       "image": "./img/modern/women/w_m_0_5.jpg",
+      "temp": "0도 이하"
+    },
+    {
+      "lookStyle": "modern",
+      "gender": "female",
+      "image": "./img/modern/women/w_m_0_6.jpg",
       "temp": "0도 이하"
     },
     {
@@ -63,6 +70,12 @@
     {
       "lookStyle": "modern",
       "gender": "female",
+      "image": "./img/modern/women/w_m_16_6.jpg",
+      "temp": "1도 이상 6도 이하"
+    },
+    {
+      "lookStyle": "modern",
+      "gender": "female",
       "image": "./img/modern/women/w_m_711_1.jpg",
       "temp": "7도 이상 11도 이하"
     },
@@ -88,6 +101,12 @@
       "lookStyle": "modern",
       "gender": "female",
       "image": "./img/modern/women/w_m_711_5.jpg",
+      "temp": "7도 이상 11도 이하"
+    },
+    {
+      "lookStyle": "modern",
+      "gender": "female",
+      "image": "./img/modern/women/w_m_711_6.jpg",
       "temp": "7도 이상 11도 이하"
     },
     {
@@ -123,6 +142,12 @@
     {
       "lookStyle": "modern",
       "gender": "female",
+      "image": "./img/modern/women/w_m_1216_6.jpg",
+      "temp": "12도 이상 16도 이하"
+    },
+    {
+      "lookStyle": "modern",
+      "gender": "female",
       "image": "./img/modern/women/w_m_1722_1.jpg",
       "temp": "17도 이상 22도 이하"
     },
@@ -148,6 +173,12 @@
       "lookStyle": "modern",
       "gender": "female",
       "image": "./img/modern/women/w_m_1722_5.jpg",
+      "temp": "17도 이상 22도 이하"
+    },
+    {
+      "lookStyle": "modern",
+      "gender": "female",
+      "image": "./img/modern/women/w_m_1722_6.jpg",
       "temp": "17도 이상 22도 이하"
     },
     {
@@ -183,6 +214,12 @@
     {
       "lookStyle": "modern",
       "gender": "female",
+      "image": "./img/modern/women/w_m_2327_6.jpg",
+      "temp": "23도 이상 27도 이하"
+    },
+    {
+      "lookStyle": "modern",
+      "gender": "female",
       "image": "./img/modern/women/w_m_28_1.jpg",
       "temp": "28도 이상"
     },
@@ -208,6 +245,12 @@
       "lookStyle": "modern",
       "gender": "female",
       "image": "./img/modern/women/w_m_28_5.jpg",
+      "temp": "28도 이상"
+    },
+    {
+      "lookStyle": "modern",
+      "gender": "female",
+      "image": "./img/modern/women/w_m_28_6.jpg",
       "temp": "28도 이상"
     },
     {
@@ -243,6 +286,12 @@
     {
       "lookStyle": "modern",
       "gender": "male",
+      "image": "./img/modern/men/m_0_6.jpg",
+      "temp": "0도 이하"
+    },
+    {
+      "lookStyle": "modern",
+      "gender": "male",
       "image": "./img/modern/men/m_16_1.jpg",
       "temp": "1도 이상 6도 이하"
     },
@@ -268,6 +317,12 @@
       "lookStyle": "modern",
       "gender": "male",
       "image": "./img/modern/men/m_16_5.jpg",
+      "temp": "1도 이상 6도 이하"
+    },
+    {
+      "lookStyle": "modern",
+      "gender": "male",
+      "image": "./img/modern/men/m_16_6.jpg",
       "temp": "1도 이상 6도 이하"
     },
     {
@@ -303,6 +358,12 @@
     {
       "lookStyle": "modern",
       "gender": "male",
+      "image": "./img/modern/men/m_711_6.jpg",
+      "temp": "7도 이상 11도 이하"
+    },
+    {
+      "lookStyle": "modern",
+      "gender": "male",
       "image": "./img/modern/men/m_1216_1.jpg",
       "temp": "12도 이상 16도 이하"
     },
@@ -328,6 +389,12 @@
       "lookStyle": "modern",
       "gender": "male",
       "image": "./img/modern/men/m_1216_5.jpg",
+      "temp": "12도 이상 16도 이하"
+    },
+    {
+      "lookStyle": "modern",
+      "gender": "male",
+      "image": "./img/modern/men/m_1216_6.jpg",
       "temp": "12도 이상 16도 이하"
     },
     {
@@ -363,6 +430,12 @@
     {
       "lookStyle": "modern",
       "gender": "male",
+      "image": "./img/modern/men/m_1722_6.jpg",
+      "temp": "17도 이상 22도 이하"
+    },
+    {
+      "lookStyle": "modern",
+      "gender": "male",
       "image": "./img/modern/men/m_2327_1.jpg",
       "temp": "23도 이상 27도 이하"
     },
@@ -393,6 +466,12 @@
     {
       "lookStyle": "modern",
       "gender": "male",
+      "image": "./img/modern/men/m_2327_6.jpg",
+      "temp": "23도 이상 27도 이하"
+    },
+    {
+      "lookStyle": "modern",
+      "gender": "male",
       "image": "./img/modern/men/m_28_1.jpg",
       "temp": "28도 이상"
     },
@@ -418,6 +497,12 @@
       "lookStyle": "modern",
       "gender": "male",
       "image": "./img/modern/men/m_28_5.jpg",
+      "temp": "28도 이상"
+    },
+    {
+      "lookStyle": "modern",
+      "gender": "male",
+      "image": "./img/modern/men/m_28_6.jpg",
       "temp": "28도 이상"
     },
     {
@@ -453,6 +538,12 @@
     {
       "lookStyle": "casual",
       "gender": "female",
+      "image": "./img/casual/women/w_c_0_6.jpg",
+      "temp": "0도 이하"
+    },
+    {
+      "lookStyle": "casual",
+      "gender": "female",
       "image": "./img/casual/women/w_c_16_1.jpg",
       "temp": "1도 이상 6도 이하"
     },
@@ -478,6 +569,12 @@
       "lookStyle": "casual",
       "gender": "female",
       "image": "./img/casual/women/w_c_16_5.jpg",
+      "temp": "1도 이상 6도 이하"
+    },
+    {
+      "lookStyle": "casual",
+      "gender": "female",
+      "image": "./img/casual/women/w_c_16_6.jpg",
       "temp": "1도 이상 6도 이하"
     },
     {
@@ -513,6 +610,12 @@
     {
       "lookStyle": "casual",
       "gender": "female",
+      "image": "./img/casual/women/w_c_711_6.jpg",
+      "temp": "7도 이상 11도 이하"
+    },
+    {
+      "lookStyle": "casual",
+      "gender": "female",
       "image": "./img/casual/women/w_c_1216_1.jpg",
       "temp": "12도 이상 16도 이하"
     },
@@ -538,6 +641,12 @@
       "lookStyle": "casual",
       "gender": "female",
       "image": "./img/casual/women/w_c_1216_5.jpg",
+      "temp": "12도 이상 16도 이하"
+    },
+    {
+      "lookStyle": "casual",
+      "gender": "female",
+      "image": "./img/casual/women/w_c_1216_6.jpg",
       "temp": "12도 이상 16도 이하"
     },
     {
@@ -573,6 +682,12 @@
     {
       "lookStyle": "casual",
       "gender": "female",
+      "image": "./img/casual/women/w_c_1722_6.jpg",
+      "temp": "17도 이상 22도 이하"
+    },
+    {
+      "lookStyle": "casual",
+      "gender": "female",
       "image": "./img/casual/women/w_c_2327_1.jpg",
       "temp": "23도 이상 27도 이하"
     },
@@ -603,6 +718,12 @@
     {
       "lookStyle": "casual",
       "gender": "female",
+      "image": "./img/casual/women/w_c_2327_6.jpg",
+      "temp": "23도 이상 27도 이하"
+    },
+    {
+      "lookStyle": "casual",
+      "gender": "female",
       "image": "./img/casual/women/w_c_28_1.jpg",
       "temp": "28도 이상"
     },
@@ -628,6 +749,12 @@
       "lookStyle": "casual",
       "gender": "female",
       "image": "./img/casual/women/w_c_28_5.jpg",
+      "temp": "28도 이상"
+    },
+    {
+      "lookStyle": "casual",
+      "gender": "female",
+      "image": "./img/casual/women/w_c_28_6.jpg",
       "temp": "28도 이상"
     },
     {
@@ -663,6 +790,12 @@
     {
       "lookStyle": "casual",
       "gender": "male",
+      "image": "./img/casual/men/c_0_6.jpg",
+      "temp": "0도 이하"
+    },
+    {
+      "lookStyle": "casual",
+      "gender": "male",
       "image": "./img/casual/men/c_16_1.jpg",
       "temp": "1도 이상 6도 이하"
     },
@@ -688,6 +821,12 @@
       "lookStyle": "casual",
       "gender": "male",
       "image": "./img/casual/men/c_16_5.jpg",
+      "temp": "1도 이상 6도 이하"
+    },
+    {
+      "lookStyle": "casual",
+      "gender": "male",
+      "image": "./img/casual/men/c_16_6.jpg",
       "temp": "1도 이상 6도 이하"
     },
     {
@@ -723,6 +862,12 @@
     {
       "lookStyle": "casual",
       "gender": "male",
+      "image": "./img/casual/men/c_711_6.jpg",
+      "temp": "7도 이상 11도 이하"
+    },
+    {
+      "lookStyle": "casual",
+      "gender": "male",
       "image": "./img/casual/men/c_1216_1.jpg",
       "temp": "12도 이상 16도 이하"
     },
@@ -748,6 +893,12 @@
       "lookStyle": "casual",
       "gender": "male",
       "image": "./img/casual/men/c_1216_5.jpg",
+      "temp": "12도 이상 16도 이하"
+    },
+    {
+      "lookStyle": "casual",
+      "gender": "male",
+      "image": "./img/casual/men/c_1216_6.jpg",
       "temp": "12도 이상 16도 이하"
     },
     {
@@ -783,6 +934,12 @@
     {
       "lookStyle": "casual",
       "gender": "male",
+      "image": "./img/casual/men/c_1722_6.jpg",
+      "temp": "17도 이상 22도 이하"
+    },
+    {
+      "lookStyle": "casual",
+      "gender": "male",
       "image": "./img/casual/men/c_2327_1.jpg",
       "temp": "23도 이상 27도 이하"
     },
@@ -813,6 +970,12 @@
     {
       "lookStyle": "casual",
       "gender": "male",
+      "image": "./img/casual/men/c_2327_6.jpg",
+      "temp": "23도 이상 27도 이하"
+    },
+    {
+      "lookStyle": "casual",
+      "gender": "male",
       "image": "./img/casual/men/c_28_1.jpg",
       "temp": "28도 이상"
     },
@@ -838,6 +1001,12 @@
       "lookStyle": "casual",
       "gender": "male",
       "image": "./img/casual/men/c_28_5.jpg",
+      "temp": "28도 이상"
+    },
+    {
+      "lookStyle": "casual",
+      "gender": "male",
+      "image": "./img/casual/men/c_28_6.jpg",
       "temp": "28도 이상"
     },
     {
@@ -873,6 +1042,12 @@
     {
       "lookStyle": "street",
       "gender": "female",
+      "image": "./img/street/women/s_0_6.jpg",
+      "temp": "0도 이하"
+    },
+    {
+      "lookStyle": "street",
+      "gender": "female",
       "image": "./img/street/women/s_16_1.jpg",
       "temp": "1도 이상 6도 이하"
     },
@@ -898,6 +1073,12 @@
       "lookStyle": "street",
       "gender": "female",
       "image": "./img/street/women/s_16_5.jpg",
+      "temp": "1도 이상 6도 이하"
+    },
+    {
+      "lookStyle": "street",
+      "gender": "female",
+      "image": "./img/street/women/s_16_6.jpg",
       "temp": "1도 이상 6도 이하"
     },
     {
@@ -933,6 +1114,12 @@
     {
       "lookStyle": "street",
       "gender": "female",
+      "image": "./img/street/women/s_711_6.jpg",
+      "temp": "7도 이상 11도 이하"
+    },
+    {
+      "lookStyle": "street",
+      "gender": "female",
       "image": "./img/street/women/s_1216_1.jpg",
       "temp": "12도 이상 16도 이하"
     },
@@ -958,6 +1145,12 @@
       "lookStyle": "street",
       "gender": "female",
       "image": "./img/street/women/s_1216_5.jpg",
+      "temp": "12도 이상 16도 이하"
+    },
+    {
+      "lookStyle": "street",
+      "gender": "female",
+      "image": "./img/street/women/s_1216_6.jpg",
       "temp": "12도 이상 16도 이하"
     },
     {
@@ -993,6 +1186,12 @@
     {
       "lookStyle": "street",
       "gender": "female",
+      "image": "./img/street/women/s_1722_6.jpg",
+      "temp": "17도 이상 22도 이하"
+    },
+    {
+      "lookStyle": "street",
+      "gender": "female",
       "image": "./img/street/women/s_2327_1.jpg",
       "temp": "23도 이상 27도 이하"
     },
@@ -1023,6 +1222,12 @@
     {
       "lookStyle": "street",
       "gender": "female",
+      "image": "./img/street/women/s_2327_6.jpg",
+      "temp": "23도 이상 27도 이하"
+    },
+    {
+      "lookStyle": "street",
+      "gender": "female",
       "image": "./img/street/women/s_28_1.jpg",
       "temp": "28도 이상"
     },
@@ -1048,6 +1253,12 @@
       "lookStyle": "street",
       "gender": "female",
       "image": "./img/street/women/s_28_5.jpg",
+      "temp": "28도 이상"
+    },
+    {
+      "lookStyle": "street",
+      "gender": "female",
+      "image": "./img/street/women/s_28_6.jpg",
       "temp": "28도 이상"
     },
     {
@@ -1083,6 +1294,12 @@
     {
       "lookStyle": "street",
       "gender": "male",
+      "image": "./img/street/men/s_0_6.jpg",
+      "temp": "0도 이하"
+    },
+    {
+      "lookStyle": "street",
+      "gender": "male",
       "image": "./img/street/men/s_16_1.jpg",
       "temp": "1도 이상 6도 이하"
     },
@@ -1108,6 +1325,12 @@
       "lookStyle": "street",
       "gender": "male",
       "image": "./img/street/men/s_16_5.jpg",
+      "temp": "1도 이상 6도 이하"
+    },
+    {
+      "lookStyle": "street",
+      "gender": "male",
+      "image": "./img/street/men/s_16_6.jpg",
       "temp": "1도 이상 6도 이하"
     },
     {
@@ -1143,6 +1366,12 @@
     {
       "lookStyle": "street",
       "gender": "male",
+      "image": "./img/street/men/s_711_6.jpg",
+      "temp": "7도 이상 11도 이하"
+    },
+    {
+      "lookStyle": "street",
+      "gender": "male",
       "image": "./img/street/men/s_1216_1.jpg",
       "temp": "12도 이상 16도 이하"
     },
@@ -1168,6 +1397,12 @@
       "lookStyle": "street",
       "gender": "male",
       "image": "./img/street/men/s_1216_5.jpg",
+      "temp": "12도 이상 16도 이하"
+    },
+    {
+      "lookStyle": "street",
+      "gender": "male",
+      "image": "./img/street/men/s_1216_6.jpg",
       "temp": "12도 이상 16도 이하"
     },
     {
@@ -1203,6 +1438,12 @@
     {
       "lookStyle": "street",
       "gender": "male",
+      "image": "./img/street/men/s_1722_6.jpg",
+      "temp": "17도 이상 22도 이하"
+    },
+    {
+      "lookStyle": "street",
+      "gender": "male",
       "image": "./img/street/men/s_2327_1.jpg",
       "temp": "23도 이상 27도 이하"
     },
@@ -1233,6 +1474,12 @@
     {
       "lookStyle": "street",
       "gender": "male",
+      "image": "./img/street/men/s_2327_6.jpg",
+      "temp": "23도 이상 27도 이하"
+    },
+    {
+      "lookStyle": "street",
+      "gender": "male",
       "image": "./img/street/men/s_28_1.jpg",
       "temp": "28도 이상"
     },
@@ -1258,6 +1505,12 @@
       "lookStyle": "street",
       "gender": "male",
       "image": "./img/street/men/s_28_5.jpg",
+      "temp": "28도 이상"
+    },
+    {
+      "lookStyle": "street",
+      "gender": "male",
+      "image": "./img/street/men/s_28_6.jpg",
       "temp": "28도 이상"
     }
   ]

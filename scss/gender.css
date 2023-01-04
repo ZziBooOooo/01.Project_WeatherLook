@@ -21,33 +21,74 @@
   width: 90%;
   height: 85%;
   display: flex;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
 }
 .mainBox #main_Sec1 .genderBox img {
-  max-width: 400px;
+  max-width: 300px;
   width: 100%;
   border-radius: 18px;
 }
 .mainBox #main_Sec1 .genderBox .genderValue {
-  margin-bottom: 50px;
+  margin-top: 50px;
   font-weight: bold;
 }
 .mainBox #main_Sec1 .genderBox #female {
   width: 50%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-left: 50px;
   margin-right: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
   cursor: pointer;
+  position: relative;
+  -webkit-filter: grayscale(100%);
+}
+.mainBox #main_Sec1 .genderBox #female p {
+  display: flex;
+  justify-content: center;
+}
+.mainBox #main_Sec1 .genderBox #female .wwgif {
+  position: absolute;
+  top: 0;
+}
+.mainBox #main_Sec1 .genderBox #female:hover {
+  -webkit-filter: grayscale(0%);
 }
 .mainBox #main_Sec1 .genderBox #male {
   width: 50%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-right: 50px;
-  margin-left: 10px;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
   cursor: pointer;
+  position: relative;
+  -webkit-filter: grayscale(100%);
+  transition: 0.2s;
+}
+.mainBox #main_Sec1 .genderBox #male .wwgif {
+  position: absolute;
+  top: 0;
+  margin-left: -157px;
+}
+.mainBox #main_Sec1 .genderBox #male:hover {
+  -webkit-filter: grayscale(0%);
+  transition: 0.2s;
+}
+.mainBox #main_Sec1 .genderBox .static:hover {
+  opacity: 0;
+  -webkit-filter: grayscale(0%);
+}
+.mainBox #main_Sec1 .genderBox:hover {
+  -webkit-filter: grayscale(0%);
 }/*# sourceMappingURL=gender.css.map */

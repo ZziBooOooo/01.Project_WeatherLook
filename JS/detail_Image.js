@@ -1,5 +1,6 @@
 idValue = localStorage.getItem("id_key");
 styleList = JSON.parse(localStorage.getItem("style"));
+console.log(styleList);
 let clickId = idValue.slice(1) - 1;
 let img_src = styleList[clickId].image.slice(5);
 
