@@ -54,6 +54,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
+          height: 50px;
 
           a:link,
           a:visited,
@@ -65,6 +66,70 @@
           .cody_title {
             font-size: 24px;
             font-weight: bold;
+          }
+
+          .contenti {
+            height: 30px;
+            i {
+              background-color: transparent;
+              border: none;
+              cursor: pointer;
+              position: relative;
+            }
+
+            .sns {
+              // visibility: hidden;
+              opacity: 0;
+
+              a {
+                transition: 0.5s;
+                i {
+                  transition: 0.5s;
+                }
+              }
+            }
+
+            /*  i:hover {
+              & + .sns {
+                display: block;
+                animation: sns2 1s forwards;
+                // opacity: 1;
+              }
+            }
+
+            i:hover & + .sns > a:nth-of-type(3) {
+              animation: sns2 0.5s forwards;
+              animation-delay: 0.5s;
+            }
+
+            i:hover & + .sns > a:nth-of-type(2) {
+              animation: sns2 0.5s forwards;
+              animation-delay: 0.2s;
+            }
+
+            i:hover & + .sns > a:nth-of-type(1) {
+              animation: sns2 0.5s forwards;
+            } */
+
+            img {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+            }
+
+            a {
+              display: block;
+            }
+          }
+
+          @keyframes sns2 {
+            from {
+              opacity: 0;
+            }
+
+            to {
+              opacity: 1;
+            }
           }
           /* 
           i {
