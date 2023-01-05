@@ -23,11 +23,11 @@ window.addEventListener("load", () => {
 
   setTimeout(() => {
     showTitle();
-  }, 1500);
+  }, 400);
 
   setTimeout(() => {
     showContents();
-  }, 3500);
+  }, 2000);
 });
 
 function showTitle() {
@@ -43,7 +43,7 @@ function animateSequence() {
     var letter = $this.innerHTML;
     letter = letter.trim();
     var str = "";
-    var delay = 100;
+    var delay = 80;
     for (l = 0; l < letter.length; l++) {
       if (letter[l] != " ") {
         str +=
@@ -56,7 +56,7 @@ function animateSequence() {
           'ms; ">' +
           letter[l] +
           "</span>";
-        delay += 150;
+        delay += 100;
       } else str += letter[l];
     }
     $this.innerHTML = str;
@@ -121,10 +121,10 @@ function showContents() {
         imgContents.forEach((img, key2) => {
           setTimeout(() => {
             img.classList.add("imgContentShow");
-          }, 400 * key2);
+          }, 200 * key2);
         });
       }
-    }, 800 * key);
+    }, 400 * key);
   });
 }
 

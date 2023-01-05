@@ -105,7 +105,7 @@ body #gradient2 {
   height: 80%;
 }
 .mainBox .weatherBox {
-  width: 180px;
+  width: 160px;
   height: 65px;
   margin-right: 2.5%;
   background-color: rgba(0, 0, 0, 0.452);
@@ -291,8 +291,8 @@ body #gradient2 {
 }
 
 #mainBoxShow {
-  -webkit-animation: 3s mainBoxShowOn forwards;
-          animation: 3s mainBoxShowOn forwards;
+  -webkit-animation: 1s mainBoxShowOn forwards;
+          animation: 1s mainBoxShowOn forwards;
 }
 
 @-webkit-keyframes mainBoxShowOn {
