@@ -1,5 +1,7 @@
 @import "./variable.scss";
-
+html {
+  overflow: hidden;
+}
 body {
   margin: 0;
   padding: 0;
@@ -121,26 +123,29 @@ body {
   }
 
   .weatherBox {
-    width: 160px;
-    height: 65px;
+    width: 140px;
+    height: 45px;
     margin-right: 2.5%;
-    background-color: rgba(0, 0, 0, 0.452);
+    background: linear-gradient(rgb(218, 164, 235), rgba(252, 178, 212, 0.726));
     border-radius: 12px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     position: absolute;
     right: 0;
     top: 10%;
     opacity: 0;
     cursor: pointer;
     border: none;
-    padding: 5px;
+    padding: 10px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18), 0 1px 3px rgba(0, 0, 0, 0.24);
     .clickText {
       display: inline-block;
       color: white;
       font-weight: 400;
       margin-left: 10px;
       animation: 2s clickTxtAni infinite forwards;
+      display: none;
     }
 
     @keyframes clickTxtAni {
@@ -157,33 +162,33 @@ body {
     .weatherBox_secondText {
       display: flex;
       align-items: center;
-      justify-content: space-around;
-      width: 90%;
-      /*   background-color: red; */
+      justify-content: center;
+      width: 100%;
+      /*       background-color: rgb(80, 80, 80); */
 
       /*  transform: translateY(-5px); */
 
       p {
         margin: 0;
         width: 40px;
-        height: 40px;
         img {
-          width: 100%;
+          width: 30px;
         }
       }
 
       span {
         display: inline-block;
-        color: white;
+        color: rgb(245, 245, 245);
+        font-size: 14px;
+        font-weight: bold;
         /* font-weight: bold; */
       }
 
       & span:nth-of-type(1) {
-        margin-right: 5px;
+        margin: 0px 5px;
       }
       #region {
         // width: 60%;
-        font-size: 13px;
       }
     }
   }
@@ -285,15 +290,38 @@ body {
       font-size: 28px;
       font-weight: bold;
       opacity: 0;
-      &:hover {
-        cursor: pointer;
+      overflow: hidden;
+      position: relative;
+
+      &.effect-underline:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        height: 1em;
+        width: 100%;
+        border-bottom: 1px solid;
+        margin-top: 10px;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(0, 1);
+        transform: scale(0, 1);
       }
+
+      &.effect-underline:hover:after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+
       span {
         margin-right: 3px;
-        color: rgb(41, 41, 41);
+        color: #2e2e2e;
       }
       i {
         font-size: 24px;
+        // opacity: 0;
       }
     }
   }
@@ -358,8 +386,10 @@ body {
 
     .logoImgBox {
       img {
-        width: 75px;
+        width: 60px;
         z-index: 100;
+        transition: 1s;
+        margin: 10px;
       }
     }
 
@@ -369,6 +399,10 @@ body {
       min-width: 360px;
       border: none;
       background-color: transparent;
+
+      #main_Sec1 {
+        height: 100%;
+      }
 
       .topBox {
         opacity: 0;
@@ -380,30 +414,57 @@ body {
           color: white;
         }
         button {
+          margin-bottom: 100px;
           span {
             color: white;
           }
           i {
             color: white;
           }
+
+          &:hover {
+            -webkit-mask-image: linear-gradient(
+              -75deg,
+              rgba(0, 0, 0, 0.808) 20%,
+              #000 50%,
+              rgba(0, 0, 0, 0.801) 70%
+            );
+            -webkit-mask-size: 200%;
+            animation: shine 2s infinite;
+          }
+
+          @-webkit-keyframes shine {
+            from {
+              -webkit-mask-position: 150%;
+            }
+
+            to {
+              -webkit-mask-position: -50%;
+            }
+          }
         }
         .b_mainContentBox {
           width: 100%;
+          height: 40%;
           display: flex;
           align-items: center;
           justify-content: center;
           background: transparent;
+          background-color: rgb(252, 246, 246);
           .mainImgBox {
-            width: 100%;
-            height: 350px;
-            background-color: rgb(252, 246, 246);
+            // width: 60%;
+            // height: 60%;
+            // background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             p {
-              // max-width: 100%;
-              // background-color: red;
+              width: 100%;
+              min-width: 130px;
 
               img {
-                max-width: 100%;
+                width: 100%;
               }
             }
 
@@ -411,13 +472,13 @@ body {
               transform: translate(50%, 10%) rotate(-10deg);
             }
             #bagBox {
-              transform: translate(10%, 10%) rotate(2deg);
+              transform: translate(5%, -10%) scale(1.05);
             }
             #shoesBox {
-              transform: translate(-20%, 10%) rotate(5deg);
+              transform: translate(-40%, 20%) rotate(5deg);
             }
             #hatBox {
-              transform: translate(-40%, 20%) rotate(7deg);
+              transform: translate(-65%, -5%) rotate(40deg) scale(1.05);
             }
           }
 
@@ -429,7 +490,29 @@ body {
       }
 
       .weatherBox {
-        bottom: 0;
+        top: 0;
+        margin-top: 20px;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: none;
+        background-color: rgb(247, 247, 247);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: 0.5s;
+        z-index: 200;
+        &:hover {
+          transform: scale(1.02);
+          background: rgb(238, 212, 250);
+        }
+
+        .clickText {
+          display: none;
+        }
+
+        #region,
+        #temp {
+          display: none;
+        }
       }
     }
   }

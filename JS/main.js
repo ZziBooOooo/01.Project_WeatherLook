@@ -117,6 +117,7 @@ function showContents() {
     setTimeout(() => {
       console.log(cont);
       cont.classList.add("contentShow");
+      cont.style.opacity = 1;
       if (key == 1) {
         imgContents.forEach((img, key2) => {
           setTimeout(() => {
@@ -126,6 +127,10 @@ function showContents() {
       }
     }, 400 * key);
   });
+  setTimeout(() => {
+    weatherBox.classList.remove("contentShow");
+    testBtn.classList.remove("contentShow");
+  }, 1500);
 }
 
 /* 메인기능 */
