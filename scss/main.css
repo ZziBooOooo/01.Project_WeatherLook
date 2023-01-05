@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/*반응형, 브라우저 크기가 767px 이하일때*/
 body {
   margin: 0;
   padding: 0;
@@ -362,5 +364,74 @@ body #gradient2 {
   }
   to {
     opacity: 1;
+  }
+}
+@media (max-width: 767px) {
+  /*브라우저 사이즈767px이하일때*/
+  body {
+    background: linear-gradient(rgba(250, 146, 196, 0.8274509804), rgba(252, 213, 72, 0.6039215686));
+    min-width: 360px;
+  }
+  body #gradient,
+body #gradient2 {
+    display: none;
+  }
+  body .logoImgBox img {
+    width: 75px;
+    z-index: 100;
+  }
+  body .mainBox {
+    width: 100%;
+    height: 100vh;
+    min-width: 360px;
+    border: none;
+    background-color: transparent;
+  }
+  body .mainBox .topBox {
+    opacity: 0;
+  }
+  body .mainBox .bottomBox #mainText {
+    width: 300px;
+    color: white;
+  }
+  body .mainBox .bottomBox button span {
+    color: white;
+  }
+  body .mainBox .bottomBox button i {
+    color: white;
+  }
+  body .mainBox .bottomBox .b_mainContentBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
+  body .mainBox .bottomBox .b_mainContentBox .mainImgBox {
+    width: 100%;
+    height: 350px;
+    background-color: rgb(252, 246, 246);
+  }
+  body .mainBox .bottomBox .b_mainContentBox .mainImgBox p img {
+    max-width: 100%;
+  }
+  body .mainBox .bottomBox .b_mainContentBox .mainImgBox #shirtBox {
+    transform: translate(50%, 10%) rotate(-10deg);
+  }
+  body .mainBox .bottomBox .b_mainContentBox .mainImgBox #bagBox {
+    transform: translate(10%, 10%) rotate(2deg);
+  }
+  body .mainBox .bottomBox .b_mainContentBox .mainImgBox #shoesBox {
+    transform: translate(-20%, 10%) rotate(5deg);
+  }
+  body .mainBox .bottomBox .b_mainContentBox .mainImgBox #hatBox {
+    transform: translate(-40%, 20%) rotate(7deg);
+  }
+  body .mainBox .bottomBox .b_mainContentBox #smallLogoText {
+    margin-right: 5%;
+    display: none;
+  }
+  body .mainBox .weatherBox {
+    bottom: 0;
   }
 }/*# sourceMappingURL=main.css.map */

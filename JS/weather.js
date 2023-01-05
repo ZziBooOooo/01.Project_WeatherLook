@@ -46,7 +46,8 @@ function filterWeather() {
     weather_des == "scattered clouds" ||
     weather_des == "broken clouds" ||
     weather_des == "mist" ||
-    weather_des == "thunderstorm"
+    weather_des == "thunderstorm" ||
+    weather_des == "haze"
   ) {
     const color1 = "#93b6ca";
     const color2 = "#4a8daa";

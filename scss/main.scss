@@ -1,3 +1,5 @@
+@import "./variable.scss";
+
 body {
   margin: 0;
   padding: 0;
@@ -337,5 +339,98 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+
+@include mobile {
+  /*브라우저 사이즈767px이하일때*/
+  body {
+    background: linear-gradient(
+      rgba(250, 146, 196, 0.8274509804),
+      rgba(252, 213, 72, 0.6039215686)
+    );
+    min-width: 360px;
+
+    #gradient,
+    #gradient2 {
+      display: none;
+    }
+
+    .logoImgBox {
+      img {
+        width: 75px;
+        z-index: 100;
+      }
+    }
+
+    .mainBox {
+      width: 100%;
+      height: 100vh;
+      min-width: 360px;
+      border: none;
+      background-color: transparent;
+
+      .topBox {
+        opacity: 0;
+      }
+
+      .bottomBox {
+        #mainText {
+          width: 300px;
+          color: white;
+        }
+        button {
+          span {
+            color: white;
+          }
+          i {
+            color: white;
+          }
+        }
+        .b_mainContentBox {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: transparent;
+          .mainImgBox {
+            width: 100%;
+            height: 350px;
+            background-color: rgb(252, 246, 246);
+
+            p {
+              // max-width: 100%;
+              // background-color: red;
+
+              img {
+                max-width: 100%;
+              }
+            }
+
+            #shirtBox {
+              transform: translate(50%, 10%) rotate(-10deg);
+            }
+            #bagBox {
+              transform: translate(10%, 10%) rotate(2deg);
+            }
+            #shoesBox {
+              transform: translate(-20%, 10%) rotate(5deg);
+            }
+            #hatBox {
+              transform: translate(-40%, 20%) rotate(7deg);
+            }
+          }
+
+          #smallLogoText {
+            margin-right: 5%;
+            display: none;
+          }
+        }
+      }
+
+      .weatherBox {
+        bottom: 0;
+      }
+    }
   }
 }
