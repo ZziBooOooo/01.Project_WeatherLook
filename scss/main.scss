@@ -12,10 +12,9 @@ body {
   box-sizing: border-box;
   // font-family: "Pretendard-Regular", sans-serif;
   // font-family: "GmarketSansMedium", sans-serif;
-  // font-family: "NanumSquareNeo-Variable", sans-serif;
-  // font-family: "BMJUA", sans-serif;
+  font-family: "NanumSquareNeo-Variable", sans-serif;
   // font-family: "IM_Hyemin-Bold", sans-serif;
-  font-family: "TmoneyRoundWindExtraBold", sans-serif;
+  // font-family: "TmoneyRoundWindExtraBold", sans-serif;
   color: rgb(51, 51, 51);
   background-color: rgb(53, 53, 53);
   // background-color: rgb(253, 237, 231);
@@ -283,6 +282,12 @@ body {
         font-size: 24px;
         margin-bottom: 10px;
         opacity: 0;
+      }
+
+      button {
+        span {
+          font-family: "NanumSquareNeo-Variable", sans-serif;
+        }
       }
     }
 

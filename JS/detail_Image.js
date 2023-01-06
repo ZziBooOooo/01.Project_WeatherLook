@@ -128,7 +128,8 @@ for (let i = 0; i < weather_text.length; i++) {
   }
 }
 
-const contenti = document.querySelector(".contenti i");
+// 공유아이콘 마우스 이벤트
+/* const contenti = document.querySelector(".contenti i");
 const sns = document.querySelectorAll(".sns a i");
 console.log(sns);
 
@@ -146,4 +147,23 @@ contenti.addEventListener("mouseout", () => {
       i.classList.remove("iconAniClass");
     }, 200);
   });
+});
+ */
+
+const contenti = document.querySelector(".contenti");
+const sns = document.querySelector(".sns");
+const snsa = document.querySelector(".sns a");
+
+contenti.addEventListener("mouseover", () => {
+  sns.style.opacity = 1;
+  sns.style.height = "68px";
+  //sns.style.display = 'block';
+  sns.style.visibility = "visible";
+});
+
+contenti.addEventListener("mouseleave", () => {
+  sns.style.opacity = 0;
+  sns.style.height = "0px";
+  //sns.style.display = 'none';
+  sns.style.visibility = "hidden";
 });

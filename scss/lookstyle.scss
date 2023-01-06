@@ -1,5 +1,6 @@
 @import "./main.css";
 @import "./style_screen_01.css";
+@import "./_variable.scss";
 
 #main_Sec1 {
   button {
@@ -176,5 +177,43 @@
 .casualBox:hover {
   #casual {
     transform: translateY(-50px) scale(1.1);
+  }
+}
+
+@include mobile {
+  .mainBox {
+    #main_Sec1 {
+      background-color: white;
+    }
+  }
+
+  .StyleSelection {
+    flex-direction: column;
+    height: 70%;
+    margin-bottom: 100px;
+    .styleBox {
+      #modern,
+      #casual {
+        transform: translateY(0px);
+        transition: 0.5s;
+      }
+
+      .shape {
+        width: 180px;
+        height: 150px;
+        min-width: 100px;
+        min-height: 80px;
+      }
+    }
+    .modernBox:hover {
+      #modern {
+        transform: translateY(0px) scale(1.1);
+      }
+    }
+    .casualBox:hover {
+      #casual {
+        transform: translateY(0px) scale(1.1);
+      }
+    }
   }
 }

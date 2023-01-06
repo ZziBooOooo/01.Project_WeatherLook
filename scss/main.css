@@ -48,7 +48,7 @@ body {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  font-family: "TmoneyRoundWindExtraBold", sans-serif;
+  font-family: "NanumSquareNeo-Variable", sans-serif;
   color: rgb(51, 51, 51);
   background-color: rgb(53, 53, 53);
   background-repeat: no-repeat;
@@ -311,6 +311,9 @@ body #gradient2 {
   font-size: 24px;
   margin-bottom: 10px;
   opacity: 0;
+}
+.mainBox .bottomBox .b_mainContentBox button span {
+  font-family: "NanumSquareNeo-Variable", sans-serif;
 }
 .mainBox .bottomBox button {
   background: transparent;
