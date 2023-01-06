@@ -127,3 +127,15 @@ for (let i = 0; i < weather_text.length; i++) {
     codyText.textContent = weather_text[i].t;
   }
 }
+const snsBox = document.querySelector(".sns");
+const contenti = document.querySelector(".contenti");
+
+contenti.addEventListener("mouseover", () => {
+  console.log("mouse");
+  snsBox.style.visibility = "visible";
+});
+
+contenti.addEventListener("mouseout", () => {
+  console.log("mouse");
+  snsBox.style.visibility = "hidden";
+});

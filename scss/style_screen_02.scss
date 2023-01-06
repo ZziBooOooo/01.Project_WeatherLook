@@ -42,43 +42,100 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       height: 100%;
       width: 100%;
 
-      .subheading {
-        height: 40%;
-        margin-top: 30px;
-        width: 95%;
-        .first_textBox {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+      .first_textBox {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
 
-          a:link,
-          a:visited,
-          a:hover,
-          a:active {
-            color: rgb(65, 65, 65);
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+          color: rgb(65, 65, 65);
+        }
+
+        .cody_title {
+          font-size: 24px;
+          font-weight: bold;
+          margin: 0;
+        }
+
+        .contenti {
+          height: 30px;
+          i {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            position: relative;
           }
 
-          .cody_title {
-            font-size: 24px;
-            font-weight: bold;
+          .sns {
+            visibility: hidden;
+            // transition: 1s;
+            // opacity: 0;
+            // display: none;
           }
-          /* 
+
+          /*  i:hover {
+            & + .sns {
+              display: block;
+              animation: sns2 1s forwards;
+              // opacity: 1;
+            }
+          }
+
+          i:hover & + .sns > a:nth-of-type(3) {
+            animation: sns2 0.5s forwards;
+            animation-delay: 0.5s;
+          }
+
+          i:hover & + .sns > a:nth-of-type(2) {
+            animation: sns2 0.5s forwards;
+            animation-delay: 0.2s;
+          }
+
+          i:hover & + .sns > a:nth-of-type(1) {
+            animation: sns2 0.5s forwards;
+          } */
+
+          img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+          }
+
+          a {
+            display: block;
+          }
+        }
+
+        @keyframes sns2 {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 1;
+          }
+        }
+        /* 
           i {
             margin-right: 10px;
           } */
-        }
-        .p1 {
-          font-weight: 700;
-          font-size: 25px;
-        }
+      }
+      .p1 {
+        font-weight: 700;
+        font-size: 25px;
+      }
 
-        .p2 {
-          padding-right: 50px;
-        }
+      .p2 {
+        padding-right: 50px;
       }
 
       .miniImg {
