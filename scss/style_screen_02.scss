@@ -69,22 +69,45 @@
           }
 
           .contenti {
-            height: 30px;
+            // height: 30px;
+            transform: translateY(30px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             i {
               background-color: transparent;
               border: none;
               cursor: pointer;
               position: relative;
+              // background-color: rgb(53, 53, 53);
+            }
+
+            .iconAniClass {
+              animation: 0.5s iconShow forwards;
+            }
+            @keyframes iconShow {
+              0% {
+                transform: translateY(-10px);
+                opacity: 0;
+              }
+
+              100% {
+                transform: translateY(0px);
+                opacity: 1;
+              }
             }
 
             .sns {
-              // visibility: hidden;
-              opacity: 0;
-
               a {
+                display: flex;
+                justify-content: center;
                 transition: 0.5s;
+                text-decoration: none;
+                margin-top: 5px;
                 i {
                   transition: 0.5s;
+                  opacity: 0;
                 }
               }
             }

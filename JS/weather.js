@@ -32,16 +32,19 @@ function setText() {
 }
 
 function setWeatherIcon() {
-  // w_Icon.src = `../img/Big_wea_Img/13d.png`;
+  // w_Icon.src = `../img/Big_wea_Img/01d.png`;
   w_Icon.src = `../img/Big_wea_Img/${weather_icon}.png`;
 }
 function filterWeather() {
-  if (weather_des == "clear sky" || weather_des == "few clouds") {
+  if (
+    weather_des == "clear sky" ||
+    weather_des == "few clouds" ||
+    weather_des == "Clouds"
+  ) {
     const color1 = "#abe9f8";
     const color2 = "#52bae4";
     shape.style.backgroundImage = `linear-gradient(64.00916346799386deg, ${color1}, ${color2})`;
   }
-
   if (
     weather_des == "scattered clouds" ||
     weather_des == "broken clouds" ||

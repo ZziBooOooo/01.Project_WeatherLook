@@ -1,3 +1,4 @@
+@import "./variable.scss";
 .mainBox {
   #main_Sec1 {
     position: relative;
@@ -80,6 +81,23 @@
         align-items: center;
         justify-content: center;
 
+        img {
+          animation: 5s iconShake infinite for;
+          transition: 1s;
+        }
+
+        @keyframes iconShake {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+          0% {
+            transform: translateY(0px);
+          }
+        }
+
         .wrap {
           width: 100%;
           //   height: 100vh;
@@ -90,11 +108,11 @@
         #shape {
           width: 430px;
           height: 410px;
-          /* background: linear-gradient(
+          background: linear-gradient(
             64.00916346799386deg,
             #c7e0ee 23.44140625%,
             #83c6e2 79.84765625%
-          ); */
+          );
           animation: wave 8s ease-in-out infinite;
           position: absolute;
           margin-top: 35px;
@@ -327,6 +345,84 @@
 
       body.single-toggle .drop:nth-child(10) {
         display: block;
+      }
+    }
+  }
+}
+
+@include mobile {
+  body {
+    .mainBox {
+      #main_Sec1 {
+        background-color: white;
+
+        #iBox {
+          margin-top: 85px;
+          color: rgb(173, 173, 173);
+          transition: 0.2s;
+
+          &:hover {
+            color: black;
+          }
+        }
+
+        .weatherContentBox {
+          width: 90%;
+          flex-direction: column;
+          height: 90vh;
+
+          .imgBox {
+            // background-color: yellow;
+            width: 100%;
+            height: 40%;
+            #shape {
+              min-width: 100px;
+              min-height: 80px;
+              width: 80%;
+              height: 90%;
+
+              .weatherImgBox {
+                width: 80%;
+                height: 75%;
+                margin-bottom: 30px;
+
+                img {
+                  max-width: 90%;
+                }
+              }
+            }
+          }
+
+          .textBox {
+            width: 100%;
+            height: 60%;
+            padding: 0;
+            align-items: center;
+            justify-content: flex-start;
+            #day {
+              font-size: 36px;
+              margin-top: 50px;
+            }
+            #time {
+              font-size: 24px;
+            }
+            .smallTextBox {
+              align-items: center;
+              justify-content: center;
+              #region {
+                font-size: 16px;
+              }
+              #temp {
+                font-size: 16px;
+              }
+            }
+
+            #weather_des {
+              font-size: 18px;
+              margin-top: 30px;
+            }
+          }
+        }
       }
     }
   }

@@ -70,7 +70,11 @@
   font-weight: bold;
 }
 .movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti {
-  height: 30px;
+  transform: translateY(30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   /*  i:hover {
     & + .sns {
       display: block;
@@ -99,14 +103,40 @@
   cursor: pointer;
   position: relative;
 }
-.movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti .sns {
-  opacity: 0;
+.movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti .iconAniClass {
+  -webkit-animation: 0.5s iconShow forwards;
+          animation: 0.5s iconShow forwards;
+}
+@-webkit-keyframes iconShow {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes iconShow {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 .movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti .sns a {
+  display: flex;
+  justify-content: center;
   transition: 0.5s;
+  text-decoration: none;
+  margin-top: 5px;
 }
 .movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti .sns a i {
   transition: 0.5s;
+  opacity: 0;
 }
 .movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti img {
   width: 20px;
