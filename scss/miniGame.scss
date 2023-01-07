@@ -1,0 +1,148 @@
+@import "./variable.scss";
+body {
+  .mainBox {
+    opacity: 1;
+    background-color: rgb(248, 248, 248);
+
+    #main_Sec1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      #iBox {
+        margin-top: 25px;
+        color: rgb(173, 173, 173);
+        transition: 0.2s;
+        height: 30px;
+        z-index: 10;
+
+        &:hover {
+          color: black;
+        }
+      }
+      .wrapper {
+        width: 420px;
+        height: 520px;
+        border-radius: 10px;
+        background: linear-gradient(
+          rgba(250, 146, 196, 0.8274509804),
+          rgba(252, 213, 72, 0.6039215686)
+        );
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .cards,
+      .card,
+      .view {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .cards {
+        width: 270px;
+        height: 400px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0;
+        background-color: rgb(252, 244, 244);
+        border-radius: 12px;
+        padding: 20px 25px;
+      }
+      .cards .card {
+        cursor: pointer;
+        list-style: none;
+        user-select: none;
+        position: relative;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+      .card.shake {
+        animation: shake 0.25s ease-in-out;
+      }
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(-10px);
+        }
+        40% {
+          transform: translateX(10px);
+        }
+        60% {
+          transform: translateX(-6px);
+        }
+        80% {
+          transform: translateX(6px);
+        }
+      }
+      .card .view {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 7px;
+        background: #fff;
+        pointer-events: none;
+        backface-visibility: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.25s linear;
+      }
+      .card .front-view img {
+        width: 60%;
+      }
+      .card .back-view img {
+        width: 100%;
+      }
+      .card .back-view {
+        transform: rotateY(-180deg);
+      }
+      .card.flip .back-view {
+        transform: rotateY(0);
+      }
+      .card.flip .front-view {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
+
+@include mobile {
+  body {
+    .logoImgBox {
+      display: none;
+    }
+
+    .mainBox {
+      background-color: transparent;
+      #main_Sec1 {
+        background-color: linear-gradient(
+          rgba(250, 146, 196, 0.8274509804),
+          rgba(252, 213, 72, 0.6039215686)
+        );
+        width: 100%;
+
+        #iBox {
+          margin-top: 45px;
+          color: white;
+        }
+
+        .wrapper {
+          background: white;
+          width: 90%;
+          .cards {
+            .card {
+            }
+          }
+        }
+      }
+    }
+  }
+}

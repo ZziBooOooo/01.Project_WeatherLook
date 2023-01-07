@@ -148,6 +148,30 @@ body #gradient2 {
 .mainBox .mainContentBox {
   height: 80%;
 }
+.mainBox .gameBox {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  margin-top: 7.5px;
+  margin-right: 170px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(rgb(201, 241, 126), rgb(255, 208, 108));
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18), 0 1px 3px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  transition: 0.1s;
+}
+.mainBox .gameBox:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
 .mainBox .weatherBox {
   width: 130px;
   height: 45px;
@@ -165,7 +189,7 @@ body #gradient2 {
   border: none;
   padding: 10px;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18), 0 1px 3px rgba(0, 0, 0, 0.24);
-  transition: 0.2s;
+  transition: 0.1s;
 }
 .mainBox .weatherBox:active {
   transform: translateY(3px);
@@ -611,6 +635,13 @@ body #gradient2 {
     margin-right: 5%;
     display: none;
   }
+  body .mainBox .gameBox {
+    top: 0;
+    right: 0;
+    margin-top: 67.5px;
+    margin-right: 18.5px;
+    background: linear-gradient(rgb(152, 218, 248), rgb(253, 253, 169));
+  }
   body .mainBox .weatherBox {
     top: 0;
     margin-top: 20px;
@@ -619,16 +650,18 @@ body #gradient2 {
     border-radius: 50%;
     background: none;
     background-color: rgb(247, 247, 247);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: 0.5s;
+    transition: 0.1s;
     z-index: 200;
+  }
+  body .mainBox .weatherBox:active {
+    transform: translateY(3px);
+    box-shadow: none;
   }
   body .mainBox .weatherBox .weatherBox_secondText p img {
     filter: invert(0);
   }
   body .mainBox .weatherBox:hover {
-    transform: scale(1.02);
-    background: rgb(255, 201, 121);
+    background: rgb(180, 238, 235);
   }
   body .mainBox .weatherBox .clickText {
     display: none;

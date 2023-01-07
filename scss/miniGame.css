@@ -1,0 +1,186 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IM_Hyemin-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TmoneyRoundWindExtraBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*반응형, 브라우저 크기가 767px 이하일때*/
+body .mainBox {
+  opacity: 1;
+  background-color: rgb(248, 248, 248);
+}
+body .mainBox #main_Sec1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .mainBox #main_Sec1 #iBox {
+  margin-top: 25px;
+  color: rgb(173, 173, 173);
+  transition: 0.2s;
+  height: 30px;
+  z-index: 10;
+}
+body .mainBox #main_Sec1 #iBox:hover {
+  color: black;
+}
+body .mainBox #main_Sec1 .wrapper {
+  width: 420px;
+  height: 520px;
+  border-radius: 10px;
+  background: linear-gradient(rgba(250, 146, 196, 0.8274509804), rgba(252, 213, 72, 0.6039215686));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .mainBox #main_Sec1 .cards,
+body .mainBox #main_Sec1 .card,
+body .mainBox #main_Sec1 .view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .mainBox #main_Sec1 .cards {
+  width: 270px;
+  height: 400px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  background-color: rgb(252, 244, 244);
+  border-radius: 12px;
+  padding: 20px 25px;
+}
+body .mainBox #main_Sec1 .cards .card {
+  cursor: pointer;
+  list-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+body .mainBox #main_Sec1 .card.shake {
+  -webkit-animation: shake 0.25s ease-in-out;
+          animation: shake 0.25s ease-in-out;
+}
+@-webkit-keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(-6px);
+  }
+  80% {
+    transform: translateX(6px);
+  }
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(-6px);
+  }
+  80% {
+    transform: translateX(6px);
+  }
+}
+body .mainBox #main_Sec1 .card .view {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 7px;
+  background: #fff;
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s linear;
+}
+body .mainBox #main_Sec1 .card .front-view img {
+  width: 60%;
+}
+body .mainBox #main_Sec1 .card .back-view img {
+  width: 100%;
+}
+body .mainBox #main_Sec1 .card .back-view {
+  transform: rotateY(-180deg);
+}
+body .mainBox #main_Sec1 .card.flip .back-view {
+  transform: rotateY(0);
+}
+body .mainBox #main_Sec1 .card.flip .front-view {
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 767px) {
+  body .logoImgBox {
+    display: none;
+  }
+  body .mainBox {
+    background-color: transparent;
+  }
+  body .mainBox #main_Sec1 {
+    background-color: linear-gradient(rgba(250, 146, 196, 0.8274509804), rgba(252, 213, 72, 0.6039215686));
+    width: 100%;
+  }
+  body .mainBox #main_Sec1 #iBox {
+    margin-top: 45px;
+    color: white;
+  }
+  body .mainBox #main_Sec1 .wrapper {
+    background: white;
+    width: 90%;
+  }
+}/*# sourceMappingURL=miniGame.css.map */
