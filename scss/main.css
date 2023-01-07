@@ -1,3 +1,45 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IM_Hyemin-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TmoneyRoundWindExtraBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*반응형, 브라우저 크기가 767px 이하일때*/
+html {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,9 +48,9 @@ body {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "NanumSquareNeo-Variable", sans-serif;
   color: rgb(51, 51, 51);
-  background-color: rgb(53, 53, 53);
+  background-color: rgb(247, 247, 247);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -54,6 +96,7 @@ body #gradient2 {
   background-color: white;
   opacity: 0;
   z-index: 20;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 .mainBox #main_Sec1 {
   height: 100%;
@@ -68,7 +111,7 @@ body #gradient2 {
   position: absolute;
   top: 0;
   left: 0;
-  margin: 85px 20px;
+  margin: 65px 20px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -92,33 +135,41 @@ body #gradient2 {
   display: flex;
   justify-content: space-between;
   width: 80px;
+  align-items: center;
 }
 .mainBox .topBox .topBox_right p {
   font-weight: bold;
   margin: 0;
+  font-size: 14px;
 }
-.mainBox .topBox .topBox_right i {
-  font-size: 20px;
-  transform: translateY(2.5px);
+.mainBox .topBox .topBox_right p i {
+  font-size: 18px;
 }
 .mainBox .mainContentBox {
   height: 80%;
 }
 .mainBox .weatherBox {
-  width: 180px;
-  height: 65px;
+  width: 130px;
+  height: 45px;
   margin-right: 2.5%;
-  background-color: rgba(0, 0, 0, 0.452);
+  background: linear-gradient(rgb(250, 178, 119), rgba(253, 201, 89, 0.856));
   border-radius: 12px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   position: absolute;
   right: 0;
   top: 10%;
   opacity: 0;
   cursor: pointer;
   border: none;
-  padding: 5px;
+  padding: 10px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18), 0 1px 3px rgba(0, 0, 0, 0.24);
+  transition: 0.2s;
+}
+.mainBox .weatherBox:active {
+  transform: translateY(3px);
+  box-shadow: none;
 }
 .mainBox .weatherBox .clickText {
   display: inline-block;
@@ -127,6 +178,7 @@ body #gradient2 {
   margin-left: 10px;
   -webkit-animation: 2s clickTxtAni infinite forwards;
           animation: 2s clickTxtAni infinite forwards;
+  display: none;
 }
 @-webkit-keyframes clickTxtAni {
   0% {
@@ -153,29 +205,28 @@ body #gradient2 {
 .mainBox .weatherBox .weatherBox_secondText {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 90%;
-  /*   background-color: red; */
+  justify-content: center;
+  width: 100%;
+  /*       background-color: rgb(80, 80, 80); */
   /*  transform: translateY(-5px); */
 }
 .mainBox .weatherBox .weatherBox_secondText p {
   margin: 0;
-  width: 40px;
-  height: 40px;
+  width: 30px;
 }
 .mainBox .weatherBox .weatherBox_secondText p img {
-  width: 100%;
+  width: 30px;
+  filter: invert(100%);
 }
 .mainBox .weatherBox .weatherBox_secondText span {
   display: inline-block;
-  color: white;
+  color: rgb(245, 245, 245);
+  font-size: 14px;
+  font-weight: bold;
   /* font-weight: bold; */
 }
 .mainBox .weatherBox .weatherBox_secondText span:nth-of-type(1) {
-  margin-right: 5px;
-}
-.mainBox .weatherBox .weatherBox_secondText #region {
-  font-size: 13px;
+  margin: 0px 5px;
 }
 .mainBox .bottomBox {
   display: flex;
@@ -233,6 +284,7 @@ body #gradient2 {
   opacity: 0;
 }
 .mainBox .bottomBox .b_mainContentBox .mainImgBox {
+  width: 100%;
   display: flex;
   height: 100%;
   align-items: center;
@@ -247,16 +299,58 @@ body #gradient2 {
   width: 250px;
 }
 .mainBox .bottomBox .b_mainContentBox .mainImgBox #shirtBox {
+  position: relative;
   transform: translate(20%, 10%) rotate(-10deg);
 }
 .mainBox .bottomBox .b_mainContentBox .mainImgBox #bagBox {
+  position: relative;
   transform: translate(1%, -10%) rotate(2deg) scale(1.1);
 }
 .mainBox .bottomBox .b_mainContentBox .mainImgBox #shoesBox {
+  position: relative;
   transform: translate(-25%, 20%);
 }
 .mainBox .bottomBox .b_mainContentBox .mainImgBox #hatBox {
+  position: relative;
   transform: translate(-30%, -15%) rotate(40deg);
+}
+.mainBox .bottomBox .b_mainContentBox .bounceAni {
+  -webkit-animation: 3s bouncing forwards infinite;
+          animation: 3s bouncing forwards infinite;
+}
+@-webkit-keyframes bouncing {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: 10px;
+  }
+  50% {
+    top: -10px;
+  }
+  75% {
+    top: 10px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes bouncing {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: 10px;
+  }
+  50% {
+    top: -10px;
+  }
+  75% {
+    top: 10px;
+  }
+  100% {
+    top: 0px;
+  }
 }
 .mainBox .bottomBox .b_mainContentBox #smallLogoText {
   position: absolute;
@@ -270,6 +364,7 @@ body #gradient2 {
   opacity: 0;
 }
 .mainBox .bottomBox button {
+  width: 120px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -278,21 +373,68 @@ body #gradient2 {
   font-size: 28px;
   font-weight: bold;
   opacity: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  /*       &.effect-underline:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    width: 100%;
+    border-bottom: 1px solid;
+    margin-top: 10px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+  }
+
+  &.effect-underline:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  } */
 }
-.mainBox .bottomBox button:hover {
-  cursor: pointer;
+.mainBox .bottomBox button:hover::after {
+  background: linear-gradient(90deg, rgba(253, 147, 191, 0.993), rgb(255, 212, 120));
+  width: 115px;
+}
+.mainBox .bottomBox button:hover span {
+  color: white;
+}
+.mainBox .bottomBox button::after {
+  transform: translateX(-5px);
+  transition: 0.5s;
+  position: absolute;
+  left: 0;
+  content: "";
+  display: block;
+  width: 0px;
+  height: 35px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(253, 147, 191, 0.993), rgb(255, 212, 120));
 }
 .mainBox .bottomBox button span {
-  margin-right: 3px;
-  color: rgb(41, 41, 41);
+  transition: 0.5s;
+  z-index: 100;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 5px;
+  color: #2e2e2e;
+  display: inline-block;
+  font-family: "NanumSquareNeo-Variable", sans-serif;
+  margin-right: 5px;
 }
 .mainBox .bottomBox button i {
   font-size: 24px;
 }
 
 #mainBoxShow {
-  -webkit-animation: 3s mainBoxShowOn forwards;
-          animation: 3s mainBoxShowOn forwards;
+  -webkit-animation: 1s mainBoxShowOn forwards;
+          animation: 1s mainBoxShowOn forwards;
 }
 
 @-webkit-keyframes mainBoxShowOn {
@@ -362,5 +504,137 @@ body #gradient2 {
   }
   to {
     opacity: 1;
+  }
+}
+@media (max-width: 767px) {
+  /*브라우저 사이즈767px이하일때*/
+  body {
+    background: linear-gradient(rgba(250, 146, 196, 0.8274509804), rgba(252, 213, 72, 0.6039215686));
+    min-width: 360px;
+  }
+  body #gradient,
+body #gradient2 {
+    display: none;
+  }
+  body .logoImgBox img {
+    width: 60px;
+    z-index: 100;
+    transition: 1s;
+    margin: 10px;
+  }
+  body .mainBox {
+    width: 100%;
+    height: 100vh;
+    min-width: 360px;
+    border: none;
+    background-color: transparent;
+  }
+  body .mainBox #main_Sec1 {
+    height: 100%;
+  }
+  body .mainBox .topBox {
+    opacity: 0;
+  }
+  body .mainBox .bottomBox #mainText {
+    width: 240px;
+    font-size: 32px;
+    color: white;
+  }
+  body .mainBox .bottomBox button {
+    width: 120px;
+    height: 35px;
+    margin-bottom: 100px;
+  }
+  body .mainBox .bottomBox button:hover::after {
+    width: 110px;
+    transform: translateX(5px);
+  }
+  body .mainBox .bottomBox button::after {
+    width: 0px;
+    transform: translateX(5px);
+  }
+  body .mainBox .bottomBox button span {
+    color: white;
+    margin: 0 auto;
+  }
+  body .mainBox .bottomBox button i {
+    color: white;
+  }
+  body .mainBox .bottomBox button:hover {
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.808) 20%, #000 50%, rgba(0, 0, 0, 0.801) 70%);
+    -webkit-mask-size: 200%;
+    -webkit-animation: shine 2s infinite;
+            animation: shine 2s infinite;
+  }
+  @-webkit-keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
+  body .mainBox .bottomBox .b_mainContentBox {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    background-color: rgb(252, 246, 246);
+  }
+  body .mainBox .bottomBox .b_mainContentBox .mainImgBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .mainBox .bottomBox .b_mainContentBox .mainImgBox p {
+    width: 100%;
+    min-width: 130px;
+  }
+  body .mainBox .bottomBox .b_mainContentBox .mainImgBox p img {
+    width: 100%;
+  }
+  body .mainBox .bottomBox .b_mainContentBox .mainImgBox #shirtBox {
+    transform: translate(50%, 10%) rotate(-10deg);
+  }
+  body .mainBox .bottomBox .b_mainContentBox .mainImgBox #bagBox {
+    transform: translate(5%, -10%) scale(1.05);
+  }
+  body .mainBox .bottomBox .b_mainContentBox .mainImgBox #shoesBox {
+    transform: translate(-40%, 20%) rotate(5deg);
+  }
+  body .mainBox .bottomBox .b_mainContentBox .mainImgBox #hatBox {
+    transform: translate(-65%, -5%) rotate(40deg) scale(1.05);
+  }
+  body .mainBox .bottomBox .b_mainContentBox #smallLogoText {
+    margin-right: 5%;
+    display: none;
+  }
+  body .mainBox .weatherBox {
+    top: 0;
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: none;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 0.5s;
+    z-index: 200;
+  }
+  body .mainBox .weatherBox .weatherBox_secondText p img {
+    filter: invert(0);
+  }
+  body .mainBox .weatherBox:hover {
+    transform: scale(1.02);
+    background: rgb(255, 201, 121);
+  }
+  body .mainBox .weatherBox .clickText {
+    display: none;
+  }
+  body .mainBox .weatherBox #region,
+body .mainBox .weatherBox #temp {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,6 +1,18 @@
+@import "./variable.scss";
+
 .mainBox {
   #main_Sec1 {
     position: relative;
+
+    #iBox {
+      margin-top: 65px;
+      color: rgb(173, 173, 173);
+      transition: 0.2s;
+
+      &:hover {
+        color: black;
+      }
+    }
 
     #genderText {
       font-size: 30px;
@@ -10,10 +22,10 @@
     .genderBox {
       width: 70%;
       min-width: 650px;
-      height: 85%;
+      height: 80%;
       display: flex;
       margin-top: 25px;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
 
       img {
@@ -22,14 +34,35 @@
         border-radius: 18px;
       }
 
-      .genderValue {
-        margin-top: 50px;
-        font-weight: bold;
+      #female,
+      #male {
+        .genderValue {
+          margin-top: 20px;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transform: translateY(10px);
+          width: 100%;
+        }
+        .genderValue::after {
+          content: "";
+          display: block;
+          width: 0%;
+          height: 35px;
+          background-color: rgb(252, 141, 174);
+          border-radius: 10px;
+          position: absolute;
+          z-index: -1;
+          transform: rotate(-3deg);
+          transition: 0.5s;
+          filter: grayscale(0%);
+        }
       }
 
       #female {
         width: 50%;
-        height: 90%;
+        height: 85%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -38,7 +71,19 @@
         object-fit: cover;
         cursor: pointer;
         position: relative;
-        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+
+        &:hover {
+          .genderValue::after {
+            width: 45%;
+          }
+          .genderValue {
+            color: white;
+          }
+        }
+        .womanImg {
+          display: none;
+        }
 
         p {
           display: flex;
@@ -49,17 +94,16 @@
         .wwgif {
           position: absolute;
           top: 0;
-          //left: 0;
         }
       }
 
       #female:hover {
-        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
       }
 
       #male {
         width: 50%;
-        height: 90%;
+        height: 85%;
         display: flex;
         margin-left: 10px;
         flex-direction: column;
@@ -70,12 +114,26 @@
         position: relative;
         -webkit-filter: grayscale(100%);
         transition: 0.2s;
+        p {
+          display: flex;
+          justify-content: center;
+        }
+        &:hover {
+          .genderValue::after {
+            background-color: rgb(248, 180, 78);
+            width: 45%;
+          }
+          .genderValue {
+            color: white;
+          }
+        }
+        .manImg {
+          display: none;
+        }
 
         .wwgif {
           position: absolute;
           top: 0;
-          margin-left: -157px;
-          //left: 0;
         }
       }
 
@@ -91,25 +149,121 @@
     }
 
     .genderBox:hover {
-      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
     }
   }
 }
 
-// div.femalebox {
-//     background-image: url(../img/ww02.jpg);
-//     width: 100%;
-//     height: 70%;
-//     object-fit: cover;
-//     border-radius: 25px;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     cursor: pointer;
-//     //overflow: hidden;
-// }
+@include mobile {
+  body {
+    .logoImgBox {
+      display: none;
+    }
+    .mainBox {
+      position: relative;
+      #main_Sec1 {
+        background-color: white;
+        justify-content: space-between;
+        position: relative;
 
-// div.femalebox:hover {
-//     background-image: url(../img/ww01.gif);
-// }
+        #iBox {
+          margin-top: 45px;
+        }
+
+        .topBox {
+          display: none;
+        }
+
+        #genderText {
+          margin-top: 40px;
+          font-size: 24px;
+        }
+        .genderBox {
+          height: 80vh;
+          // margin-bottom: 50%;
+          min-width: 300px;
+          width: 80%;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+
+          #female,
+          #male {
+            width: 50%;
+            filter: grayscale(0%);
+            height: auto;
+            margin-top: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .wwgif {
+              display: none;
+            }
+
+            p {
+              width: 100%;
+              margin: 0;
+            }
+            .womanImg,
+            .manImg {
+              display: block;
+            }
+            .genderValue {
+              transition: 0.5s;
+              color: $blackColor;
+              font-weight: bold;
+              transform: translateY(20px);
+              margin: 0;
+              height: 30px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+            }
+
+            .genderValue::after {
+              content: "";
+              display: block;
+              width: 0%;
+              height: 30px;
+              background-color: rgb(252, 210, 96);
+              border-radius: 10px;
+              position: absolute;
+              z-index: -1;
+              transform: rotate(-3deg);
+              transition: 0.5s;
+            }
+          }
+
+          #female:hover {
+            .genderValue {
+              color: white;
+            }
+            .genderValue::after {
+              width: 70%;
+              background-color: rgb(255, 105, 79);
+              transform: rotate(-3deg);
+            }
+          }
+
+          #male {
+            .genderValue::after {
+              background-color: rgb(119, 167, 121);
+            }
+          }
+          #male:hover {
+            .genderValue {
+              color: white;
+            }
+            .genderValue::after {
+              width: 70%;
+              background-color: rgb(86, 183, 212);
+              transform: rotate(-3deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -23,7 +23,6 @@ function getTime() {
   const time = new Date();
   let minute = time.getMinutes();
   if (minute < 10) {
-    console.log("8");
     cur_time.textContent = `${time.getHours()}:0${time.getMinutes()}`;
   } else {
     cur_time.textContent = `${time.getHours()}:${time.getMinutes()}`;
@@ -34,3 +33,25 @@ setInterval(getTime, 1000);
 
 const mainBox = document.querySelector(".mainBox");
 mainBox.style.opacity = 1;
+
+/* const shapes = document.querySelectorAll(".styleBox");
+const mainBox2 = document.querySelector(".mainBox");
+console.log(shapes);
+
+shapes.forEach((shape, key) => {
+  shape.addEventListener("mouseenter", (e) => {
+    if (key == 0) {
+      mainBox2.style.backgroundColor = "rgb(248, 237, 237)";
+    }
+    if (key == 1) {
+      mainBox2.style.backgroundColor = "rgb(231, 250, 236)";
+    }
+    if (key == 2) {
+      mainBox2.style.backgroundColor = "rgb(250, 247, 231)";
+    }
+  });
+
+  shape.addEventListener("mouseleave", (e) => {
+    mainBox2.style.backgroundColor = "white";
+  });
+}); */

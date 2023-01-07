@@ -1,5 +1,6 @@
 @import "./main.css";
 @import "./style_screen_01.css";
+@import "./_variable.scss";
 
 #main_Sec1 {
   button {
@@ -13,6 +14,16 @@
     position: absolute;
     cursor: pointer;
   }
+
+  #iBox {
+    margin-top: 65px;
+    color: rgb(173, 173, 173);
+    transition: 0.2s;
+
+    &:hover {
+      color: black;
+    }
+  }
 }
 .titleBox {
   position: absolute;
@@ -23,15 +34,14 @@
     position: relative;
     margin: 0 auto;
     width: 100%;
-    //right: 50%;
-    padding-top: 50px;
     width: 100%;
     //display: flex;
     //justify-content: center;
 
     p {
+      margin-top: 40px;
       width: 100%;
-      font-size: 25px;
+      font-size: 30px;
       font-weight: 900;
     }
   }
@@ -39,12 +49,41 @@
 .StyleSelection {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 90%;
   height: 80%;
+  .modernBox,
+  .casualBox {
+    transition: 0.5s;
+    transform: translateY(-50px);
+    p {
+      transform: translateY(5px);
+    }
+    &:hover {
+      transform: translateY(-50px) scale(1.15);
+
+      p {
+        transform: translateY(-10px) scale(1.05);
+      }
+    }
+  }
+  .streetBox {
+    transition: 0.5s;
+    transform: translateY(25px);
+    p {
+      transform: translateY(5px);
+    }
+    &:hover {
+      transform: translateY(25px) scale(1.2);
+      p {
+        transform: translateY(-10px) scale(1.05);
+      }
+    }
+  }
 
   .styleBox {
     width: 100%;
-    height: 100%;
+    height: 50%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -66,12 +105,7 @@
         rgb(231, 92, 162) 79.84765625%
       );
       animation: wave 8s ease-in-out infinite;
-      transform: translateY(-50px);
       transition: 0.5s;
-
-      &:hover {
-        transform: translateY(-50px) scale(1.2);
-      }
     }
     .streetShape {
       background: linear-gradient(
@@ -80,12 +114,7 @@
         rgb(94, 196, 94) 79.84765625%
       );
       animation: wave2 10s ease-in-out infinite;
-      transform: translateY(10px);
       transition: 0.5s;
-
-      &:hover {
-        transform: translateY(10px) scale(1.2);
-      }
     }
     .casualShape {
       background: linear-gradient(
@@ -94,12 +123,7 @@
         rgb(238, 204, 55) 79.84765625%
       );
       animation: wave3 9s ease-in-out infinite;
-      transform: translateY(-50px);
       transition: 0.5s;
-
-      &:hover {
-        transform: translateY(-50px) scale(1.2);
-      }
     }
 
     @keyframes wave {
@@ -155,26 +179,60 @@
       cursor: pointer;
       transition: 0.5s;
     }
+  }
+}
 
-    #modern,
-    #casual {
-      transform: translateY(-50px);
-      transition: 0.5s;
+@include mobile {
+  body {
+    .logoImgBox {
+      display: none;
     }
   }
-}
-.modernBox:hover {
-  #modern {
-    transform: translateY(-50px) scale(1.1);
+  .mainBox {
+    #main_Sec1 {
+      background-color: white;
+
+      #iBox {
+        margin-top: 45px;
+      }
+      .titleBox {
+        .titletext {
+          p {
+            font-size: 24px;
+          }
+        }
+      }
+    }
   }
-}
-.streetBox:hover {
-  #street {
-    transform: scale(1.1);
-  }
-}
-.casualBox:hover {
-  #casual {
-    transform: translateY(-50px) scale(1.1);
+
+  .StyleSelection {
+    flex-direction: column;
+    height: 65%;
+    margin-bottom: 150px;
+    p {
+      margin: 0;
+    }
+    .modernBox,
+    .streetBox,
+    .casualBox {
+      width: 40%;
+      min-width: 210px;
+      transform: translateY(0);
+
+      &:hover {
+        transform: translateY(0) scale(1.1);
+      }
+    }
+    .styleBox {
+      .shape {
+        width: 180px;
+        height: 150px;
+        min-width: 100px;
+        min-height: 80px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
   }
 }

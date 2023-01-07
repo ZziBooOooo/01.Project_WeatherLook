@@ -94,27 +94,27 @@ let texts = {
   text: [
     {
       temp: "0도 이하",
-      t: "0도 이하 텍스트",
+      t: "추운날씨엔 목도리, 모자, 장갑을 챙겨주세요",
     },
     {
       temp: "1도 이상 6도 이하",
-      t: "1도 이상 6도 이하 텍스트",
+      t: "날씨가 많이 춥지 않습니다. 얇은 옷을 여러겹 입는 것을 추천드려요",
     },
     {
       temp: "7도 이상 11도 이하",
-      t: "7도 이상 11도 이하 텍스트",
+      t: "선선한 날씨에는 얇은 외투, 자켓 등을 챙겨주세요",
     },
     {
       temp: "17도 이상 22도 이하",
-      t: "17도 이상 22도 이하 텍스트",
+      t: "활동하기에 딱 좋은 날씨. 얇지만 아직은 긴소매 옷을 추천드려요 ",
     },
     {
       temp: "23도 이상 27도 이하",
-      t: "23도 이상 27도 이하 텍스트",
+      t: "일교차가 있어요. 아침과 밤에 일정이 있다면 얇은 외투를 추천합니다",
     },
     {
       temp: "28도 이상",
-      t: "28도 이상 텍스트",
+      t: "날씨가 더워요. 소매가 없거나 짧은 하의를 추천드려요",
     },
   ],
 };
@@ -127,15 +127,43 @@ for (let i = 0; i < weather_text.length; i++) {
     codyText.textContent = weather_text[i].t;
   }
 }
-const snsBox = document.querySelector(".sns");
-const contenti = document.querySelector(".contenti");
+
+// 공유아이콘 마우스 이벤트
+/* const contenti = document.querySelector(".contenti i");
+const sns = document.querySelectorAll(".sns a i");
+console.log(sns);
 
 contenti.addEventListener("mouseover", () => {
-  console.log("mouse");
-  snsBox.style.visibility = "visible";
+  sns.forEach((i, key) => {
+    setTimeout(() => {
+      i.classList.add("iconAniClass");
+    }, key * 200);
+  });
 });
 
 contenti.addEventListener("mouseout", () => {
-  console.log("mouse");
-  snsBox.style.visibility = "hidden";
+  sns.forEach((i) => {
+    setTimeout(() => {
+      i.classList.remove("iconAniClass");
+    }, 200);
+  });
+});
+ */
+
+const contenti = document.querySelector(".contenti");
+const sns = document.querySelector(".sns");
+const snsa = document.querySelector(".sns a");
+
+contenti.addEventListener("mouseover", () => {
+  sns.style.opacity = 1;
+  sns.style.height = "68px";
+  //sns.style.display = 'block';
+  sns.style.visibility = "visible";
+});
+
+contenti.addEventListener("mouseleave", () => {
+  sns.style.opacity = 0;
+  sns.style.height = "0px";
+  //sns.style.display = 'none';
+  sns.style.visibility = "hidden";
 });

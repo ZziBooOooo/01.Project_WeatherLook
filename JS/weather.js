@@ -32,21 +32,25 @@ function setText() {
 }
 
 function setWeatherIcon() {
-  // w_Icon.src = `../img/Big_wea_Img/13d.png`;
+  // w_Icon.src = `../img/Big_wea_Img/01d.png`;
   w_Icon.src = `../img/Big_wea_Img/${weather_icon}.png`;
 }
 function filterWeather() {
-  if (weather_des == "clear sky" || weather_des == "few clouds") {
+  if (
+    weather_des == "clear sky" ||
+    weather_des == "few clouds" ||
+    weather_des == "Clouds"
+  ) {
     const color1 = "#abe9f8";
     const color2 = "#52bae4";
     shape.style.backgroundImage = `linear-gradient(64.00916346799386deg, ${color1}, ${color2})`;
   }
-
   if (
     weather_des == "scattered clouds" ||
     weather_des == "broken clouds" ||
     weather_des == "mist" ||
-    weather_des == "thunderstorm"
+    weather_des == "thunderstorm" ||
+    weather_des == "haze"
   ) {
     const color1 = "#93b6ca";
     const color2 = "#4a8daa";
@@ -74,11 +78,11 @@ window.addEventListener("load", () => {
   console.log(mainBox);
   mainBox.style.opacity = 1;
 
+  setText();
   filterWeather();
   setWeatherIcon();
-  setText();
-
   setInterval(setText, 5000);
+  setTempText();
 });
 
 function makeItRain() {
@@ -153,56 +157,91 @@ function getTime() {
 setInterval(getTime, 1000);
 
 let cur_weather = JSON.parse(localStorage.getItem("weather"));
-cur_weather_des = cur_weather.weather[0].description;
+cur_weather_icon = cur_weather.weather[0].icon;
 
 let texts = {
   text: [
     {
-      des: "clear sky",
-      t: "맑은날",
+      des: "01d",
+      t: "오늘은 맑고 화창한 날! 상쾌한 기분으로 오늘 하루를 즐겨보세요",
     },
     {
-      des: "few clouds",
-      t: "적은 구름",
+      des: "01n",
+      t: "오늘은 맑고 화창한 날! 상쾌한 기분으로 오늘 하루를 즐겨보세요",
     },
     {
-      des: "scattered clouds",
-      t: "많은 구름",
+      des: "02d",
+      t: "맑지만 약간의 구름이 있는 날이예요. 오늘도 즐거운 하루 되세요",
     },
     {
-      des: "broken clouds",
-      t: "깨진구름이 뭔소리고",
+      des: "02n",
+      t: "맑지만 약간의 구름이 있는 날이예요. 오늘도 즐거운 하루 되세요",
     },
     {
-      des: "shower rain",
-      t: "샤워레인..?",
+      des: "03d",
+      t: "흐린 날이지만 웃으면서 즐거운 하루 보내세요",
     },
     {
-      des: "rain",
-      t: "비",
+      des: "03n",
+      t: "흐린 날이지만 웃으면서 즐거운 하루 보내세요",
     },
     {
-      des: "thunderstorm",
-      t: "천둥번개",
+      des: "04d",
+      t: "오늘은 날이 흐려요. 내일은 화창한 날씨를 바라며! 오늘도 즐거운 하루 보내세요",
     },
     {
-      des: "snow",
-      t: "눈",
+      des: "04n",
+      t: "오늘은 날이 흐려요. 내일은 화창한 날씨를 바라며! 오늘도 즐거운 하루 보내세요",
     },
     {
-      des: "mist",
-      t: "안개",
+      des: "09d",
+      t: "오늘은 비가 내리는 날이예요. 비가 오면 맑은 날보다 챙겨야 할 것들이 많지만 한발 먼저 움직이며 여유로운 시간이 되었으면 좋겠어요. 오늘도 여유로운 하루!",
+    },
+    {
+      des: "09n",
+      t: "오늘은 비가 내리는 날이예요. 비가 오면 맑은 날보다 챙겨야 할 것들이 많지만 한발 먼저 움직이며 여유로운 시간이 되었으면 좋겠어요. 오늘도 여유로운 하루!",
+    },
+    {
+      des: "10d",
+      t: "비가 온 뒤에야 환한 무지개를 만나듯 힘든 일 걷히고 좋은 일만 가득할 거라는 기대와 설렘으로 행복한 하루 보내ㅛㅔ요.",
+    },
+    {
+      des: "10n",
+      t: "비가 온 뒤에야 환한 무지개를 만나듯 힘든 일 걷히고 좋은 일만 가득할 거라는 기대와 설렘으로 행복한 하루 보내ㅛㅔ요.",
+    },
+    {
+      des: "11d",
+      t: "천둥과 번개가 공포를 느끼게 해도 그저 자연 현상일 뿐이라고 생각해요. 불안해 하지마세요!",
+    },
+    {
+      des: "11n",
+      t: "천둥과 번개가 공포를 느끼게 해도 그저 자연 현상일 뿐이라고 생각해요. 불안해 하지마세요!",
+    },
+    {
+      des: "13d",
+      t: "눈이 한바탕 내리고 나니 점점 추워져요. 항상 건강 조심하시고, 행복하게 겨울 보내세요",
+    },
+    {
+      des: "13n",
+      t: "눈이 한바탕 내리고 나니 점점 추워져요. 항상 건강 조심하시고, 행복하게 겨울 보내세요",
+    },
+    {
+      des: "50d",
+      t: "안개는 건강에 좋지 않아요. 오늘은 야외활동을 자제하여 호흡기 질환을 조심해요",
+    },
+    {
+      des: "50n",
+      t: "안개는 건강에 좋지 않아요. 오늘은 야외활동을 자제하여 호흡기 질환을 조심해요",
     },
   ],
 };
 let weather_text = texts.text;
 console.log(weather_text);
 
-for (let i = 0; i < weather_text.length; i++) {
-  if (cur_weather_des == weather_text[i].des) {
-    console.log(i);
-    console.log(cur_weather_des);
-    console.log(weather_text[i].des);
-    weather_des.textContent = weather_text[i].t;
+function setTempText() {
+  for (let i = 0; i < weather_text.length; i++) {
+    if (cur_weather_icon == weather_text[i].des) {
+      weather_textBox.textContent = weather_text[i].t;
+    }
   }
 }

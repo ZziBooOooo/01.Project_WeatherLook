@@ -1,6 +1,7 @@
 const weatherBox = document.querySelector(".weatherBox");
 const API_KEY = "367636d16a48743eb5074f58249138c2";
 let tempList;
+const imgs = document.querySelectorAll(".mainImgBox p");
 
 /* 현재시간 업데이트 */
 function getTime() {
@@ -23,13 +24,24 @@ window.addEventListener("load", () => {
 
   setTimeout(() => {
     showTitle();
-  }, 1500);
+  }, 400);
 
   setTimeout(() => {
     showContents();
-  }, 3500);
+  }, 2000);
+
+  setTimeout(() => {
+    imgAni();
+  }, 4000);
 });
 
+function imgAni() {
+  imgs.forEach((img, key) => {
+    setTimeout(() => {
+      img.classList.add("bounceAni");
+    }, key * 200);
+  });
+}
 function showTitle() {
   mainText.style.opacity = 1;
   animateSequence();
@@ -43,7 +55,7 @@ function animateSequence() {
     var letter = $this.innerHTML;
     letter = letter.trim();
     var str = "";
-    var delay = 100;
+    var delay = 80;
     for (l = 0; l < letter.length; l++) {
       if (letter[l] != " ") {
         str +=
@@ -56,7 +68,7 @@ function animateSequence() {
           'ms; ">' +
           letter[l] +
           "</span>";
-        delay += 150;
+        delay += 100;
       } else str += letter[l];
     }
     $this.innerHTML = str;
@@ -115,17 +127,26 @@ function showContents() {
 
   contents.forEach((cont, key) => {
     setTimeout(() => {
-      console.log(cont);
+      // console.log(cont);
       cont.classList.add("contentShow");
+      cont.style.opacity = 1;
       if (key == 1) {
         imgContents.forEach((img, key2) => {
           setTimeout(() => {
             img.classList.add("imgContentShow");
-          }, 400 * key2);
+            img.style.opacity = 1;
+          }, 200 * key2);
         });
       }
-    }, 800 * key);
+    }, 400 * key);
   });
+  setTimeout(() => {
+    weatherBox.classList.remove("contentShow");
+    testBtn.classList.remove("contentShow");
+    imgContents.forEach((img) => {
+      img.classList.remove("imgContentShow");
+    });
+  }, 2000);
 }
 
 /* 메인기능 */

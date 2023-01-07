@@ -1,4 +1,50 @@
+@charset "UTF-8";
 @import "./main.css";
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IM_Hyemin-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TmoneyRoundWindExtraBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*반응형, 브라우저 크기가 767px 이하일때*/
+.mainBox #iBox {
+  margin-top: 65px;
+  color: rgb(173, 173, 173);
+  transition: 0.2s;
+}
+.mainBox #iBox:hover {
+  color: black;
+}
 .mainBox .StyleTitle {
   width: 100%;
   position: absolute;
@@ -7,7 +53,6 @@
 .mainBox .StyleTitle .titletext {
   margin: 0 auto;
   width: 100%;
-  padding-top: 50px;
   width: 100%;
 }
 .mainBox .StyleTitle .titletext a {
@@ -18,8 +63,9 @@
 }
 .mainBox .StyleTitle .titletext p {
   width: 100%;
-  font-size: 25px;
-  font-weight: 900;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 65px;
 }
 .mainBox .StyleTitle .titletext img {
   position: absolute;
@@ -82,4 +128,117 @@
 }
 .mainBox .StyleTitle .container .wrap-slider .js-slider article:hover {
   -webkit-filter: grayscale(0%);
+}
+
+@media (max-width: 767px) {
+  /*브라우저 사이즈767px이하일때*/
+  body.dummy {
+    background: white;
+    min-width: 360px;
+  }
+  body.dummy .logoImgBox {
+    display: none;
+  }
+  body.dummy .mainBox {
+    background: white;
+    min-width: 360px;
+  }
+  body.dummy .mainBox #main_Sec1 #iBox {
+    margin-top: 45px;
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle {
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    text-align: center;
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle .titletext {
+    margin: 0 auto;
+    width: 100%;
+    width: 100%;
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle .titletext a {
+    position: absolute;
+    left: 10%;
+    top: 14%;
+    color: black;
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle .titletext p {
+    color: rgb(0, 0, 0);
+    width: 100%;
+    font-size: 24px;
+    font-weight: 900;
+    margin-top: 40px;
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle .titletext img {
+    position: absolute;
+    width: 25px;
+    left: 10%;
+    top: 14%;
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle .titletext button {
+    width: 200px;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    margin-right: 45px;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: 900;
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle .container .wrap-slider {
+    width: 100%;
+    overflow: hidden;
+    height: 350px;
+    position: relative;
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle .container .wrap-slider .js-slider {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: row;
+    will-change: transform;
+    background-color: rgb(59, 58, 58);
+    height: 100%;
+    align-items: center;
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle .container .wrap-slider .js-slider article {
+    position: relative;
+    float: left;
+    padding: 0 10px;
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle .container .wrap-slider .js-slider article img {
+    border-radius: 20px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transition: 1s;
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle .container .wrap-slider .js-slider article img:hover {
+    transform: scale(1.15);
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(1), body.dummy .mainBox #main_Sec1 .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(3), body.dummy .mainBox #main_Sec1 .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(5) {
+    transform: translateY(20%);
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(2), body.dummy .mainBox #main_Sec1 .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(4), body.dummy .mainBox #main_Sec1 .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(6) {
+    transform: translateY(-20%);
+  }
+  body.dummy .mainBox #main_Sec1 .StyleTitle .container .wrap-slider .js-slider article:hover {
+    -webkit-filter: grayscale(0%);
+  }
 }/*# sourceMappingURL=style_screen_01.css.map */

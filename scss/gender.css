@@ -1,5 +1,51 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IM_Hyemin-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TmoneyRoundWindExtraBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*반응형, 브라우저 크기가 767px 이하일때*/
 .mainBox #main_Sec1 {
   position: relative;
+}
+.mainBox #main_Sec1 #iBox {
+  margin-top: 65px;
+  color: rgb(173, 173, 173);
+  transition: 0.2s;
+}
+.mainBox #main_Sec1 #iBox:hover {
+  color: black;
 }
 .mainBox #main_Sec1 #genderText {
   font-size: 30px;
@@ -8,10 +54,10 @@
 .mainBox #main_Sec1 .genderBox {
   width: 70%;
   min-width: 650px;
-  height: 85%;
+  height: 80%;
   display: flex;
   margin-top: 25px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .mainBox #main_Sec1 .genderBox img {
@@ -19,13 +65,33 @@
   width: 100%;
   border-radius: 18px;
 }
-.mainBox #main_Sec1 .genderBox .genderValue {
-  margin-top: 50px;
+.mainBox #main_Sec1 .genderBox #female .genderValue,
+.mainBox #main_Sec1 .genderBox #male .genderValue {
+  margin-top: 20px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(10px);
+  width: 100%;
+}
+.mainBox #main_Sec1 .genderBox #female .genderValue::after,
+.mainBox #main_Sec1 .genderBox #male .genderValue::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 35px;
+  background-color: rgb(252, 141, 174);
+  border-radius: 10px;
+  position: absolute;
+  z-index: -1;
+  transform: rotate(-3deg);
+  transition: 0.5s;
+  filter: grayscale(0%);
 }
 .mainBox #main_Sec1 .genderBox #female {
   width: 50%;
-  height: 90%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +101,16 @@
      object-fit: cover;
   cursor: pointer;
   position: relative;
-  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.mainBox #main_Sec1 .genderBox #female:hover .genderValue::after {
+  width: 45%;
+}
+.mainBox #main_Sec1 .genderBox #female:hover .genderValue {
+  color: white;
+}
+.mainBox #main_Sec1 .genderBox #female .womanImg {
+  display: none;
 }
 .mainBox #main_Sec1 .genderBox #female p {
   display: flex;
@@ -47,11 +122,11 @@
   top: 0;
 }
 .mainBox #main_Sec1 .genderBox #female:hover {
-  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 .mainBox #main_Sec1 .genderBox #male {
   width: 50%;
-  height: 90%;
+  height: 85%;
   display: flex;
   margin-left: 10px;
   flex-direction: column;
@@ -64,10 +139,23 @@
   -webkit-filter: grayscale(100%);
   transition: 0.2s;
 }
+.mainBox #main_Sec1 .genderBox #male p {
+  display: flex;
+  justify-content: center;
+}
+.mainBox #main_Sec1 .genderBox #male:hover .genderValue::after {
+  background-color: rgb(248, 180, 78);
+  width: 45%;
+}
+.mainBox #main_Sec1 .genderBox #male:hover .genderValue {
+  color: white;
+}
+.mainBox #main_Sec1 .genderBox #male .manImg {
+  display: none;
+}
 .mainBox #main_Sec1 .genderBox #male .wwgif {
   position: absolute;
   top: 0;
-  margin-left: -157px;
 }
 .mainBox #main_Sec1 .genderBox #male:hover {
   -webkit-filter: grayscale(0%);
@@ -78,5 +166,108 @@
   -webkit-filter: grayscale(0%);
 }
 .mainBox #main_Sec1 .genderBox:hover {
-  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+@media (max-width: 767px) {
+  body .logoImgBox {
+    display: none;
+  }
+  body .mainBox {
+    position: relative;
+  }
+  body .mainBox #main_Sec1 {
+    background-color: white;
+    justify-content: space-between;
+    position: relative;
+  }
+  body .mainBox #main_Sec1 #iBox {
+    margin-top: 45px;
+  }
+  body .mainBox #main_Sec1 .topBox {
+    display: none;
+  }
+  body .mainBox #main_Sec1 #genderText {
+    margin-top: 40px;
+    font-size: 24px;
+  }
+  body .mainBox #main_Sec1 .genderBox {
+    height: 80vh;
+    min-width: 300px;
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  body .mainBox #main_Sec1 .genderBox #female,
+body .mainBox #main_Sec1 .genderBox #male {
+    width: 50%;
+    filter: grayscale(0%);
+    height: auto;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body .mainBox #main_Sec1 .genderBox #female .wwgif,
+body .mainBox #main_Sec1 .genderBox #male .wwgif {
+    display: none;
+  }
+  body .mainBox #main_Sec1 .genderBox #female p,
+body .mainBox #main_Sec1 .genderBox #male p {
+    width: 100%;
+    margin: 0;
+  }
+  body .mainBox #main_Sec1 .genderBox #female .womanImg,
+body .mainBox #main_Sec1 .genderBox #female .manImg,
+body .mainBox #main_Sec1 .genderBox #male .womanImg,
+body .mainBox #main_Sec1 .genderBox #male .manImg {
+    display: block;
+  }
+  body .mainBox #main_Sec1 .genderBox #female .genderValue,
+body .mainBox #main_Sec1 .genderBox #male .genderValue {
+    transition: 0.5s;
+    color: rgb(48, 48, 48);
+    font-weight: bold;
+    transform: translateY(20px);
+    margin: 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  body .mainBox #main_Sec1 .genderBox #female .genderValue::after,
+body .mainBox #main_Sec1 .genderBox #male .genderValue::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 30px;
+    background-color: rgb(252, 210, 96);
+    border-radius: 10px;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(-3deg);
+    transition: 0.5s;
+  }
+  body .mainBox #main_Sec1 .genderBox #female:hover .genderValue {
+    color: white;
+  }
+  body .mainBox #main_Sec1 .genderBox #female:hover .genderValue::after {
+    width: 70%;
+    background-color: rgb(255, 105, 79);
+    transform: rotate(-3deg);
+  }
+  body .mainBox #main_Sec1 .genderBox #male .genderValue::after {
+    background-color: rgb(119, 167, 121);
+  }
+  body .mainBox #main_Sec1 .genderBox #male:hover .genderValue {
+    color: white;
+  }
+  body .mainBox #main_Sec1 .genderBox #male:hover .genderValue::after {
+    width: 70%;
+    background-color: rgb(86, 183, 212);
+    transform: rotate(-3deg);
+  }
 }/*# sourceMappingURL=gender.css.map */

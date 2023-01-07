@@ -1,5 +1,43 @@
+@charset "UTF-8";
 @import "./main.css";
 @import "./style_screen_01.css";
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IM_Hyemin-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TmoneyRoundWindExtraBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*반응형, 브라우저 크기가 767px 이하일때*/
 #main_Sec1 button {
   background-color: transparent;
   border: none;
@@ -11,6 +49,14 @@
   position: absolute;
   cursor: pointer;
 }
+#main_Sec1 #iBox {
+  margin-top: 65px;
+  color: rgb(173, 173, 173);
+  transition: 0.2s;
+}
+#main_Sec1 #iBox:hover {
+  color: black;
+}
 
 .titleBox {
   position: absolute;
@@ -20,24 +66,55 @@
   position: relative;
   margin: 0 auto;
   width: 100%;
-  padding-top: 50px;
   width: 100%;
 }
 .titleBox .titletext p {
+  margin-top: 40px;
   width: 100%;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 900;
 }
 
 .StyleSelection {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 90%;
   height: 80%;
 }
+.StyleSelection .modernBox,
+.StyleSelection .casualBox {
+  transition: 0.5s;
+  transform: translateY(-50px);
+}
+.StyleSelection .modernBox p,
+.StyleSelection .casualBox p {
+  transform: translateY(5px);
+}
+.StyleSelection .modernBox:hover,
+.StyleSelection .casualBox:hover {
+  transform: translateY(-50px) scale(1.15);
+}
+.StyleSelection .modernBox:hover p,
+.StyleSelection .casualBox:hover p {
+  transform: translateY(-10px) scale(1.05);
+}
+.StyleSelection .streetBox {
+  transition: 0.5s;
+  transform: translateY(25px);
+}
+.StyleSelection .streetBox p {
+  transform: translateY(5px);
+}
+.StyleSelection .streetBox:hover {
+  transform: translateY(25px) scale(1.2);
+}
+.StyleSelection .streetBox:hover p {
+  transform: translateY(-10px) scale(1.05);
+}
 .StyleSelection .styleBox {
   width: 100%;
-  height: 100%;
+  height: 50%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -55,31 +132,19 @@
   background: linear-gradient(64.009163468deg, rgb(241, 155, 205) 23.44140625%, rgb(231, 92, 162) 79.84765625%);
   -webkit-animation: wave 8s ease-in-out infinite;
           animation: wave 8s ease-in-out infinite;
-  transform: translateY(-50px);
   transition: 0.5s;
-}
-.StyleSelection .styleBox .modernShape:hover {
-  transform: translateY(-50px) scale(1.2);
 }
 .StyleSelection .styleBox .streetShape {
   background: linear-gradient(64.009163468deg, rgb(149, 207, 178) 23.44140625%, rgb(94, 196, 94) 79.84765625%);
   -webkit-animation: wave2 10s ease-in-out infinite;
           animation: wave2 10s ease-in-out infinite;
-  transform: translateY(10px);
   transition: 0.5s;
-}
-.StyleSelection .styleBox .streetShape:hover {
-  transform: translateY(10px) scale(1.2);
 }
 .StyleSelection .styleBox .casualShape {
   background: linear-gradient(64.009163468deg, rgba(235, 206, 126, 0.842) 23.44140625%, rgb(238, 204, 55) 79.84765625%);
   -webkit-animation: wave3 9s ease-in-out infinite;
           animation: wave3 9s ease-in-out infinite;
-  transform: translateY(-50px);
   transition: 0.5s;
-}
-.StyleSelection .styleBox .casualShape:hover {
-  transform: translateY(-50px) scale(1.2);
 }
 @-webkit-keyframes wave {
   0%, 100% {
@@ -161,20 +226,47 @@
   cursor: pointer;
   transition: 0.5s;
 }
-.StyleSelection .styleBox #modern,
-.StyleSelection .styleBox #casual {
-  transform: translateY(-50px);
-  transition: 0.5s;
-}
 
-.modernBox:hover #modern {
-  transform: translateY(-50px) scale(1.1);
-}
-
-.streetBox:hover #street {
-  transform: scale(1.1);
-}
-
-.casualBox:hover #casual {
-  transform: translateY(-50px) scale(1.1);
+@media (max-width: 767px) {
+  body .logoImgBox {
+    display: none;
+  }
+  .mainBox #main_Sec1 {
+    background-color: white;
+  }
+  .mainBox #main_Sec1 #iBox {
+    margin-top: 45px;
+  }
+  .mainBox #main_Sec1 .titleBox .titletext p {
+    font-size: 24px;
+  }
+  .StyleSelection {
+    flex-direction: column;
+    height: 65%;
+    margin-bottom: 150px;
+  }
+  .StyleSelection p {
+    margin: 0;
+  }
+  .StyleSelection .modernBox,
+.StyleSelection .streetBox,
+.StyleSelection .casualBox {
+    width: 40%;
+    min-width: 210px;
+    transform: translateY(0);
+  }
+  .StyleSelection .modernBox:hover,
+.StyleSelection .streetBox:hover,
+.StyleSelection .casualBox:hover {
+    transform: translateY(0) scale(1.1);
+  }
+  .StyleSelection .styleBox .shape {
+    width: 180px;
+    height: 150px;
+    min-width: 100px;
+    min-height: 80px;
+  }
+  .StyleSelection .styleBox p {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=lookstyle.css.map */

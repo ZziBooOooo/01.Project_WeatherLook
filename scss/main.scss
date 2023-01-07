@@ -1,3 +1,7 @@
+@import "./variable.scss";
+html {
+  overflow: hidden;
+}
 body {
   margin: 0;
   padding: 0;
@@ -6,9 +10,13 @@ body {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif;
+  // font-family: "Pretendard-Regular", sans-serif;
+  // font-family: "GmarketSansMedium", sans-serif;
+  font-family: "NanumSquareNeo-Variable", sans-serif;
+  // font-family: "IM_Hyemin-Bold", sans-serif;
+  // font-family: "TmoneyRoundWindExtraBold", sans-serif;
   color: rgb(51, 51, 51);
-  background-color: rgb(53, 53, 53);
+  background-color: rgb(247, 247, 247);
   // background-color: rgb(253, 237, 231);
   // background-image: url("../img/bg/2.png");
   background-repeat: no-repeat;
@@ -57,6 +65,7 @@ body {
   background-color: white;
   opacity: 0;
   z-index: 20;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 
   #main_Sec1 {
     height: 100%;
@@ -71,7 +80,7 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      margin: 85px 20px;
+      margin: 65px 20px;
       background-color: transparent;
       border: none;
       cursor: pointer;
@@ -100,16 +109,17 @@ body {
       display: flex;
       justify-content: space-between;
       width: 80px;
+      align-items: center;
       //   background-color: rgb(194, 194, 243);
 
       p {
         font-weight: bold;
         margin: 0;
-      }
+        font-size: 14px;
 
-      i {
-        font-size: 20px;
-        transform: translateY(2.5px);
+        i {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -119,26 +129,35 @@ body {
   }
 
   .weatherBox {
-    width: 180px;
-    height: 65px;
+    width: 130px;
+    height: 45px;
     margin-right: 2.5%;
-    background-color: rgba(0, 0, 0, 0.452);
+    background: linear-gradient(rgb(250, 178, 119), rgba(253, 201, 89, 0.856));
     border-radius: 12px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     position: absolute;
     right: 0;
     top: 10%;
     opacity: 0;
     cursor: pointer;
     border: none;
-    padding: 5px;
+    padding: 10px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18), 0 1px 3px rgba(0, 0, 0, 0.24);
+    transition: 0.2s;
+
+    &:active {
+      transform: translateY(3px);
+      box-shadow: none;
+    }
     .clickText {
       display: inline-block;
       color: white;
       font-weight: 400;
       margin-left: 10px;
       animation: 2s clickTxtAni infinite forwards;
+      display: none;
     }
 
     @keyframes clickTxtAni {
@@ -155,33 +174,34 @@ body {
     .weatherBox_secondText {
       display: flex;
       align-items: center;
-      justify-content: space-around;
-      width: 90%;
-      /*   background-color: red; */
+      justify-content: center;
+      width: 100%;
+      /*       background-color: rgb(80, 80, 80); */
 
       /*  transform: translateY(-5px); */
 
       p {
         margin: 0;
-        width: 40px;
-        height: 40px;
+        width: 30px;
         img {
-          width: 100%;
+          width: 30px;
+          filter: invert(100%);
         }
       }
 
       span {
         display: inline-block;
-        color: white;
+        color: rgb(245, 245, 245);
+        font-size: 14px;
+        font-weight: bold;
         /* font-weight: bold; */
       }
 
       & span:nth-of-type(1) {
-        margin-right: 5px;
+        margin: 0px 5px;
       }
       #region {
         // width: 60%;
-        font-size: 13px;
       }
     }
   }
@@ -235,6 +255,7 @@ body {
       opacity: 0;
 
       .mainImgBox {
+        width: 100%;
         display: flex;
         height: 100%;
         align-items: center;
@@ -248,19 +269,44 @@ body {
           }
         }
         #shirtBox {
+          position: relative;
           transform: translate(20%, 10%) rotate(-10deg);
         }
         #bagBox {
+          position: relative;
           transform: translate(1%, -10%) rotate(2deg) scale(1.1);
         }
         #shoesBox {
+          position: relative;
           transform: translate(-25%, 20%);
         }
         #hatBox {
+          position: relative;
           transform: translate(-30%, -15%) rotate(40deg);
         }
       }
 
+      .bounceAni {
+        animation: 3s bouncing forwards infinite;
+      }
+
+      @keyframes bouncing {
+        0% {
+          top: 0px;
+        }
+        25% {
+          top: 10px;
+        }
+        50% {
+          top: -10px;
+        }
+        75% {
+          top: 10px;
+        }
+        100% {
+          top: 0px;
+        }
+      }
       #smallLogoText {
         position: absolute;
         right: 0;
@@ -275,6 +321,7 @@ body {
     }
 
     button {
+      width: 120px;
       background: transparent;
       border: none;
       cursor: pointer;
@@ -283,22 +330,85 @@ body {
       font-size: 28px;
       font-weight: bold;
       opacity: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+
       &:hover {
-        cursor: pointer;
+        &::after {
+          background: linear-gradient(
+            90deg,
+            rgba(253, 147, 191, 0.993),
+            rgb(255, 212, 120)
+          );
+          width: 115px;
+        }
+
+        span {
+          color: white;
+        }
       }
+
+      &::after {
+        transform: translateX(-5px);
+        transition: 0.5s;
+        position: absolute;
+        left: 0;
+        content: "";
+        display: block;
+        width: 0px;
+        height: 35px;
+        border-radius: 8px;
+        background: linear-gradient(
+          90deg,
+          rgba(253, 147, 191, 0.993),
+          rgb(255, 212, 120)
+        );
+      }
+
+      /*       &.effect-underline:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        height: 1em;
+        width: 100%;
+        border-bottom: 1px solid;
+        margin-top: 10px;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(0, 1);
+        transform: scale(0, 1);
+      }
+
+      &.effect-underline:hover:after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      } */
+
       span {
-        margin-right: 3px;
-        color: rgb(41, 41, 41);
+        transition: 0.5s;
+        z-index: 100;
+        font-size: 24px;
+        font-weight: bold;
+        margin-right: 5px;
+        color: #2e2e2e;
+        display: inline-block;
+        font-family: "NanumSquareNeo-Variable", sans-serif;
+        margin-right: 5px;
       }
       i {
         font-size: 24px;
+        // opacity: 0;
       }
     }
   }
 }
 
 #mainBoxShow {
-  animation: 3s mainBoxShowOn forwards;
+  animation: 1s mainBoxShowOn forwards;
 }
 
 @keyframes mainBoxShowOn {
@@ -337,5 +447,176 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+
+@include mobile {
+  /*브라우저 사이즈767px이하일때*/
+  body {
+    background: linear-gradient(
+      rgba(250, 146, 196, 0.8274509804),
+      rgba(252, 213, 72, 0.6039215686)
+    );
+    min-width: 360px;
+
+    #gradient,
+    #gradient2 {
+      display: none;
+    }
+
+    .logoImgBox {
+      img {
+        width: 60px;
+        z-index: 100;
+        transition: 1s;
+        margin: 10px;
+      }
+    }
+
+    .mainBox {
+      width: 100%;
+      height: 100vh;
+      min-width: 360px;
+      border: none;
+      background-color: transparent;
+
+      #main_Sec1 {
+        height: 100%;
+      }
+
+      .topBox {
+        opacity: 0;
+      }
+
+      .bottomBox {
+        #mainText {
+          width: 240px;
+          font-size: 32px;
+          color: white;
+        }
+        button {
+          width: 120px;
+          height: 35px;
+          margin-bottom: 100px;
+
+          &:hover {
+            &::after {
+              width: 110px;
+              transform: translateX(5px);
+            }
+          }
+          &::after {
+            width: 0px;
+            transform: translateX(5px);
+          }
+          span {
+            color: white;
+            margin: 0 auto;
+          }
+          i {
+            color: white;
+          }
+
+          &:hover {
+            -webkit-mask-image: linear-gradient(
+              -75deg,
+              rgba(0, 0, 0, 0.808) 20%,
+              #000 50%,
+              rgba(0, 0, 0, 0.801) 70%
+            );
+            -webkit-mask-size: 200%;
+            animation: shine 2s infinite;
+          }
+
+          @-webkit-keyframes shine {
+            from {
+              -webkit-mask-position: 150%;
+            }
+
+            to {
+              -webkit-mask-position: -50%;
+            }
+          }
+        }
+        .b_mainContentBox {
+          width: 100%;
+          height: 40%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: transparent;
+          background-color: rgb(252, 246, 246);
+          .mainImgBox {
+            // width: 60%;
+            // height: 60%;
+            // background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+              width: 100%;
+              min-width: 130px;
+
+              img {
+                width: 100%;
+              }
+            }
+
+            #shirtBox {
+              transform: translate(50%, 10%) rotate(-10deg);
+            }
+            #bagBox {
+              transform: translate(5%, -10%) scale(1.05);
+            }
+            #shoesBox {
+              transform: translate(-40%, 20%) rotate(5deg);
+            }
+            #hatBox {
+              transform: translate(-65%, -5%) rotate(40deg) scale(1.05);
+            }
+          }
+
+          #smallLogoText {
+            margin-right: 5%;
+            display: none;
+          }
+        }
+      }
+
+      .weatherBox {
+        top: 0;
+        margin-top: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: none;
+        background-color: rgb(247, 247, 247);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: 0.5s;
+        z-index: 200;
+
+        .weatherBox_secondText {
+          p {
+            img {
+              filter: invert(0);
+            }
+          }
+        }
+        &:hover {
+          transform: scale(1.02);
+          background: rgb(255, 201, 121);
+        }
+
+        .clickText {
+          display: none;
+        }
+
+        #region,
+        #temp {
+          display: none;
+        }
+      }
+    }
   }
 }
