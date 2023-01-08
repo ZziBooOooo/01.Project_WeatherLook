@@ -69,7 +69,7 @@
         justify-content: space-between;
         margin-right: 10px;
         object-fit: cover;
-        cursor: pointer;
+        cursor: none;
         position: relative;
         filter: grayscale(100%);
 
@@ -110,7 +110,7 @@
         align-items: center;
         justify-content: space-between;
         object-fit: cover;
-        cursor: pointer;
+        cursor: none;
         position: relative;
         -webkit-filter: grayscale(100%);
         transition: 0.2s;

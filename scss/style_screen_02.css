@@ -38,6 +38,13 @@
   font-style: normal;
 }
 /*반응형, 브라우저 크기가 767px 이하일때*/
+.mainBox #main_Sec1 #iBox {
+  z-index: 10;
+}
+.mainBox #main_Sec1 #iBox i:hover {
+  color: rgb(48, 48, 48);
+}
+
 .movebox {
   width: 90%;
   height: 80%;
@@ -106,15 +113,23 @@
 .movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti {
   height: 20px;
   color: rgb(150, 150, 150);
+  cursor: none;
 }
 .movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti:hover {
   color: rgb(48, 48, 48);
+  cursor: none;
 }
 .movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti i {
   background-color: transparent;
   border: none;
-  cursor: pointer;
+  cursor: none;
   position: relative;
+  transition: 0.5s;
+  color: rgb(150, 150, 150);
+}
+.movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti i:hover {
+  transform: scale(1.1);
+  color: rgb(34, 34, 34);
 }
 .movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti .sns {
   visibility: hidden;
@@ -134,6 +149,7 @@
   align-items: center;
   height: 30%;
   text-decoration: none;
+  cursor: none;
 }
 .movebox .right .StyleimgsBoxright .subheading .p1 {
   font-weight: 700;
@@ -165,6 +181,7 @@
 .movebox .right .StyleimgsBoxright .miniImg .swiper-button-prev {
   z-index: 10;
   right: 0;
+  cursor: none;
 }
 .movebox .right .StyleimgsBoxright .miniImg .swiper-button-next i,
 .movebox .right .StyleimgsBoxright .miniImg .swiper-button-prev i {
@@ -176,9 +193,15 @@
   left: 0;
   transform: translateX(-100%);
 }
+.movebox .right .StyleimgsBoxright .miniImg .swiper-button-prev:active {
+  transform: translateX(-100%) scale(0.9);
+}
 .movebox .right .StyleimgsBoxright .miniImg .swiper-button-next {
   right: 0;
   transform: translateX(100%);
+}
+.movebox .right .StyleimgsBoxright .miniImg .swiper-button-next:active {
+  transform: translateX(100%) scale(0.9);
 }
 .movebox .right .StyleimgsBoxright .miniImg .swiper-button-next:after,
 .movebox .right .StyleimgsBoxright .miniImg .swiper-button-prev:after {
@@ -291,18 +314,21 @@ body.dummy .movebox .right .StyleimgsBoxright .subheading .first_textBox a:visit
 body.dummy .movebox .right .StyleimgsBoxright .subheading .first_textBox a:hover,
 body.dummy .movebox .right .StyleimgsBoxright .subheading .first_textBox a:active {
     color: rgb(65, 65, 65);
+    cursor: none;
   }
   body.dummy .movebox .right .StyleimgsBoxright .subheading .first_textBox .cody_title {
     font-size: 24px;
     font-weight: bold;
+    cursor: none;
   }
   body.dummy .movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti {
     height: 20px;
+    cursor: none;
   }
   body.dummy .movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti i {
     background-color: transparent;
     border: none;
-    cursor: pointer;
+    cursor: none;
     position: relative;
   }
   body.dummy .movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti .sns {
@@ -314,6 +340,10 @@ body.dummy .movebox .right .StyleimgsBoxright .subheading .first_textBox a:activ
   body.dummy .movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti .sns a {
     display: block;
     height: 30%;
+    cursor: none;
+  }
+  body.dummy .movebox .right .StyleimgsBoxright .subheading .first_textBox .contenti .sns a i {
+    cursor: none;
   }
   body.dummy .movebox .right .StyleimgsBoxright .subheading .first_textBox .p1 {
     font-weight: 700;

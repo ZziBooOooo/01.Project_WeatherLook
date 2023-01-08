@@ -55,6 +55,21 @@ body {
   background-size: cover;
   position: relative;
   overflow: hidden;
+  cursor: none;
+}
+body .cursor {
+  background-image: url("../img/검지손가락.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, 0%) rotate(-5deg);
+  z-index: 900;
+  pointer-events: none;
 }
 body #gradient {
   width: 1000px;
@@ -82,7 +97,7 @@ body #gradient2 {
   position: absolute;
   top: 0;
   left: 0;
-  cursor: pointer;
+  cursor: none;
 }
 
 .mainBox {
@@ -114,8 +129,7 @@ body #gradient2 {
   margin: 65px 20px;
   background-color: transparent;
   border: none;
-  cursor: pointer;
-  z-index: 100;
+  cursor: none;
 }
 .mainBox #main_Sec1 #iBox i {
   font-size: 20px;
@@ -165,7 +179,7 @@ body #gradient2 {
   align-items: center;
   justify-content: center;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18), 0 1px 3px rgba(0, 0, 0, 0.24);
-  cursor: pointer;
+  cursor: none;
   transition: 0.1s;
 }
 .mainBox .gameBox:active {
@@ -185,7 +199,7 @@ body #gradient2 {
   right: 0;
   top: 10%;
   opacity: 0;
-  cursor: pointer;
+  cursor: none;
   border: none;
   padding: 10px;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18), 0 1px 3px rgba(0, 0, 0, 0.24);
@@ -391,7 +405,7 @@ body #gradient2 {
   width: 120px;
   background: transparent;
   border: none;
-  cursor: pointer;
+  cursor: none;
   margin-top: 20px;
   margin-bottom: 50px;
   font-size: 28px;
@@ -639,7 +653,7 @@ body #gradient2 {
     top: 0;
     right: 0;
     margin-top: 67.5px;
-    margin-right: 18.5px;
+    margin-right: 3.2%;
     background: linear-gradient(rgb(152, 218, 248), rgb(253, 253, 169));
   }
   body .mainBox .weatherBox {

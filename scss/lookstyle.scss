@@ -12,7 +12,7 @@
     right: 0;
     margin-right: 20px;
     position: absolute;
-    cursor: pointer;
+    cursor: none;
   }
 
   #iBox {
@@ -95,7 +95,7 @@
       height: 230px;
       min-width: 225px;
       min-height: 200px;
-      cursor: pointer;
+      cursor: none;
     }
 
     .modernShape {
@@ -176,7 +176,7 @@
       font-size: 24px;
       position: absolute;
       color: rgb(245, 245, 245);
-      cursor: pointer;
+      cursor: none;
       transition: 0.5s;
     }
   }

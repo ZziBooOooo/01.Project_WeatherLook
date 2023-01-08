@@ -1,6 +1,18 @@
 @import "./main.css";
 @import "./style_screen_01.css";
 @import "./variable.scss";
+.mainBox {
+  #main_Sec1 {
+    #iBox {
+      z-index: 10;
+      i {
+        &:hover {
+          color: $blackColor;
+        }
+      }
+    }
+  }
+}
 
 .movebox {
   width: 90%;
@@ -74,16 +86,23 @@
           .contenti {
             height: 20px;
             color: $grayColor;
-
+            cursor: none;
             &:hover {
               color: $blackColor;
+              cursor: none;
             }
 
             i {
               background-color: transparent;
               border: none;
-              cursor: pointer;
+              cursor: none;
               position: relative;
+              transition: 0.5s;
+              color: $grayColor;
+              &:hover {
+                transform: scale(1.1);
+                color: rgb(34, 34, 34);
+              }
             }
 
             .sns {
@@ -108,6 +127,7 @@
                 align-items: center;
                 height: 30%;
                 text-decoration: none;
+                cursor: none;
               }
             }
           }
@@ -148,6 +168,7 @@
         .swiper-button-prev {
           z-index: 10;
           right: 0;
+          cursor: none;
 
           i {
             width: 15px;
@@ -159,11 +180,19 @@
         .swiper-button-prev {
           left: 0;
           transform: translateX(-100%);
+
+          &:active {
+            transform: translateX(-100%) scale(0.9);
+          }
         }
 
         .swiper-button-next {
           right: 0;
           transform: translateX(100%);
+
+          &:active {
+            transform: translateX(100%) scale(0.9);
+          }
         }
 
         .swiper-button-next:after,
@@ -299,20 +328,23 @@
               a:hover,
               a:active {
                 color: rgb(65, 65, 65);
+                cursor: none;
               }
 
               .cody_title {
                 font-size: 24px;
                 font-weight: bold;
+                cursor: none;
               }
 
               .contenti {
                 height: 20px;
+                cursor: none;
 
                 i {
                   background-color: transparent;
                   border: none;
-                  cursor: pointer;
+                  cursor: none;
                   position: relative;
                 }
 
@@ -329,6 +361,10 @@
                     //transition: 0.5s;
                     display: block;
                     height: 30%;
+                    cursor: none;
+                    i {
+                      cursor: none;
+                    }
                   }
                 }
               }

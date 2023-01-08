@@ -8,6 +8,7 @@ function flipCard({ target: clickedCard }) {
   //   console.log({ target: clickedCard });
   //   console.log(clickedCard);
   if (cardOne !== clickedCard && !disableDeck) {
+    console.log(cardOne);
     clickedCard.classList.add("flip");
     if (!cardOne) {
       return (cardOne = clickedCard);
@@ -23,7 +24,7 @@ function flipCard({ target: clickedCard }) {
 function matchCards(img1, img2) {
   if (img1 === img2) {
     matched++;
-    console.log(matched);
+
     if (matched == 6) {
       setTimeout(() => {
         return shuffleCard();

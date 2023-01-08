@@ -41,6 +41,7 @@
   margin-top: 65px;
   color: rgb(173, 173, 173);
   transition: 0.2s;
+  z-index: 10;
 }
 .mainBox #iBox:hover {
   color: black;
@@ -122,6 +123,7 @@
 }
 .mainBox .StyleTitle .container .wrap-slider .js-slider article img:hover {
   transform: scale(1.15);
+  cursor: none;
 }
 .mainBox .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(1), .mainBox .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(3), .mainBox .StyleTitle .container .wrap-slider .js-slider article:nth-of-type(5) {
   transform: translateY(30%);

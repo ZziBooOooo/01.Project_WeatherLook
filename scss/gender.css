@@ -99,7 +99,7 @@
   margin-right: 10px;
   -o-object-fit: cover;
      object-fit: cover;
-  cursor: pointer;
+  cursor: none;
   position: relative;
   filter: grayscale(100%);
 }
@@ -134,7 +134,7 @@
   justify-content: space-between;
   -o-object-fit: cover;
      object-fit: cover;
-  cursor: pointer;
+  cursor: none;
   position: relative;
   -webkit-filter: grayscale(100%);
   transition: 0.2s;
