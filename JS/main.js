@@ -120,9 +120,10 @@ function getRandomInt(min, max) {
 
 function showContents() {
   const weatherBox = document.querySelector(".weatherBox");
+  const gameBox = document.querySelector(".gameBox");
   const b_mainContentBox = document.querySelector(".b_mainContentBox");
   const testBtn = document.querySelector(".bottomBox button");
-  const contents = [weatherBox, b_mainContentBox, testBtn];
+  const contents = [weatherBox, gameBox, b_mainContentBox, testBtn];
   const imgContents = [shirtBox, bagBox, shoesBox, hatBox, smallLogoText];
 
   contents.forEach((cont, key) => {
