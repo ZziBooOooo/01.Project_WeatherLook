@@ -8,9 +8,11 @@ let disableDeck = false;
 let timeLeft = maxTime;
 isPlaying = false;
 
-function stopGame() {
+function stopGame(matched) {
   console.log("test");
   popupBox.classList.add("active");
+  if (matched == 6) {
+  }
 }
 
 function initTimer() {
@@ -55,7 +57,7 @@ function matchCards(img1, img2) {
       cardOne.removeEventListener("click", flipCard);
       cardTwo.removeEventListener("click", flipCard);
       cardOne = cardTwo = "";
-      stopGame();
+      stopGame(matched);
       return (disableDeck = false);
     }
   }
@@ -73,8 +75,10 @@ function matchCards(img1, img2) {
 }
 
 function shuffleCard() {
+  popupBox.classList.remove("active");
   timeLeft = maxTime;
   matched = 0;
+  console.log(matched);
   clearInterval(timer);
   timeText.textContent = `남은시간 : ${timeLeft}`;
 

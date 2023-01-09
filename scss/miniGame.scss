@@ -56,8 +56,8 @@ body {
           display: none;
           position: absolute;
           background-color: rgba(19, 19, 19, 0.7);
-          width: 400px;
-          height: 300px;
+          width: 300px;
+          height: 200px;
           border-radius: 12px;
           color: white;
 
@@ -207,6 +207,14 @@ body {
           }
           .cards {
             .card {
+            }
+          }
+
+          button {
+            width: 200px;
+            height: 100px;
+            #resultText {
+              font-size: 18px;
             }
           }
         }
