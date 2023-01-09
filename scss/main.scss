@@ -29,8 +29,8 @@ body {
     background-image: url("../img/검지손가락.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     border-radius: 50%;
     left: 0;
@@ -170,9 +170,9 @@ body {
     }
   }
   .weatherBox {
-    width: 130px;
+    width: 135px;
     height: 45px;
-    margin-right: 2.5%;
+    margin-right: 15px;
     background: linear-gradient(rgb(250, 178, 119), rgba(253, 201, 89, 0.856));
     border-radius: 12px;
     display: flex;
@@ -223,10 +223,11 @@ body {
 
       p {
         margin: 0;
-        width: 30px;
+        width: 40px;
+        transform: translateX(-3px);
         img {
-          width: 30px;
-          filter: invert(100%);
+          width: 100%;
+          // filter: invert(100%);
         }
       }
 
@@ -238,11 +239,9 @@ body {
         /* font-weight: bold; */
       }
 
-      & span:nth-of-type(1) {
-        margin: 0px 5px;
-      }
       #region {
         // width: 60%;
+        margin-right: 3px;
       }
     }
   }
@@ -510,7 +509,7 @@ body {
         width: 60px;
         z-index: 100;
         transition: 1s;
-        margin: 10px;
+        margin: 15px;
       }
     }
 
@@ -629,7 +628,7 @@ body {
         top: 0;
         right: 0;
         margin-top: 67.5px;
-        margin-right: 3.2%;
+        margin-right: 19px;
         background: linear-gradient(rgb(152, 218, 248), rgb(253, 253, 169));
       }
 
@@ -652,7 +651,7 @@ body {
         .weatherBox_secondText {
           p {
             img {
-              filter: invert(0);
+              // filter: invert(0);
             }
           }
         }

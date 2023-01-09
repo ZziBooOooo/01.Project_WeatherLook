@@ -170,9 +170,9 @@ function displayWeather(data) {
   /* const weatherImg = document.createElement("img");
   weatherImg.src = `./img/weather_Icon/${data.weather[0].icon}.png`;
   weatherImg.setAttribute("class", "floating"); */
-  // weatherImg.src = `./img/weather_Icon/04d.gif`;
   let mainTemp = Math.floor(data.main.temp);
   weatherIcon.src = `../img/weather_icon/${data.weather[0].icon}.png`;
+  // weatherIcon.src = `../img/weather_icon/01d.png`;
   temp.innerHTML = mainTemp + "℃";
   region.innerHTML = data.name;
 
