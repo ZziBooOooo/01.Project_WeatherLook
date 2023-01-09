@@ -1,12 +1,36 @@
 const cards = document.querySelectorAll(".card");
+const refreshBtn = document.querySelector("#popupBox button");
 
+let maxTime = 30;
 let matched = 0;
-let cardOne, cardTwo;
+let cardOne, cardTwo, timer;
 let disableDeck = false;
+let timeLeft = maxTime;
+isPlaying = false;
+
+function stopGame() {
+  console.log("test");
+  popupBox.classList.add("active");
+}
+
+function initTimer() {
+  if (timeLeft <= 0) {
+    stopGame();
+    return clearInterval(timer);
+  }
+
+  timeLeft--;
+  timeText.textContent = `남은시간 : ${timeLeft}`;
+}
 
 function flipCard({ target: clickedCard }) {
   //   console.log({ target: clickedCard });
   //   console.log(clickedCard);
+
+  if (!isPlaying) {
+    isPlaying = true;
+    timer = setInterval(initTimer, 1000);
+  }
   if (cardOne !== clickedCard && !disableDeck) {
     console.log(cardOne);
     clickedCard.classList.add("flip");
@@ -24,16 +48,16 @@ function flipCard({ target: clickedCard }) {
 function matchCards(img1, img2) {
   if (img1 === img2) {
     matched++;
-
     if (matched == 6) {
-      setTimeout(() => {
-        return shuffleCard();
-      }, 1000);
+      if (matchedCard == 6 && timeLeft > 0) {
+        return clearInterval(timer);
+      }
+      cardOne.removeEventListener("click", flipCard);
+      cardTwo.removeEventListener("click", flipCard);
+      cardOne = cardTwo = "";
+      stopGame();
+      return (disableDeck = false);
     }
-    cardOne.removeEventListener("click", flipCard);
-    cardTwo.removeEventListener("click", flipCard);
-    cardOne = cardTwo = "";
-    return (disableDeck = false);
   }
   setTimeout(() => {
     cardOne.classList.add("shake");
@@ -49,8 +73,12 @@ function matchCards(img1, img2) {
 }
 
 function shuffleCard() {
+  timeLeft = maxTime;
   matched = 0;
-  disableDeck = false;
+  clearInterval(timer);
+  timeText.textContent = `남은시간 : ${timeLeft}`;
+
+  disableDeck = isPlaying = false;
   cardOne = cardTwo = "";
   let arr = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
   arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
@@ -64,6 +92,8 @@ function shuffleCard() {
 }
 
 shuffleCard();
+
+refreshBtn.addEventListener("click", shuffleCard);
 
 cards.forEach((card) => {
   card.addEventListener("click", flipCard);

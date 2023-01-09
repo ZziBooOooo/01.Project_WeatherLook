@@ -1,8 +1,11 @@
 @import "./variable.scss";
 body {
+  flex-direction: column;
+
   .mainBox {
     opacity: 1;
     background-color: rgb(248, 248, 248);
+    position: relative;
 
     #main_Sec1 {
       display: flex;
@@ -32,6 +35,60 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        #timeText {
+          font-size: 32px;
+          z-index: 100;
+          font-weight: bold;
+          background-color: rgba(255, 255, 255, 0.623);
+          border-radius: 12px;
+          padding: 5px 10px;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -300%);
+          margin: 0;
+          width: 220px;
+          text-align: center;
+        }
+
+        #popupBox {
+          display: none;
+          position: absolute;
+          background-color: rgba(19, 19, 19, 0.7);
+          width: 400px;
+          height: 300px;
+          border-radius: 12px;
+          color: white;
+
+          #resultText {
+            font-size: 24px;
+          }
+
+          button {
+            background-color: rgb(248, 108, 185);
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i {
+              color: #fff;
+              font-size: 24px;
+            }
+          }
+        }
+
+        .active {
+          display: flex !important;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
       }
       .cards,
       .card,
@@ -122,6 +179,7 @@ body {
 
     .mainBox {
       background-color: transparent;
+
       #main_Sec1 {
         background-color: linear-gradient(
           rgba(250, 146, 196, 0.8274509804),
@@ -137,6 +195,16 @@ body {
         .wrapper {
           background: white;
           width: 90%;
+          position: relative;
+
+          #timeText {
+            width: 150px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            font-size: 24px;
+            transform: translate(-50%, -150%);
+          }
           .cards {
             .card {
             }
