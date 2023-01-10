@@ -9,9 +9,9 @@ const textLogo2 = document.querySelector(".textLogo2");
 function finishIntro() {
   thirdSec.style.display = "block";
   thirdSec.classList.add("overlayDisplay");
-  /*   setTimeout(() => {
+  setTimeout(() => {
     location.href = "./pages/main.html";
-  }, 2000); */
+  }, 2000);
 }
 function textLogoShow() {
   textLogo1.classList.add("textLogoOn");
