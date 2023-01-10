@@ -1178,299 +1178,298 @@
       "image": "./img/casual/men/c_28_6.jpg",
       "temp": "28도 이상"
     },
-
     {
       "title": "스트릿 바이브",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_0_1.jpg",
+      "image": "./img/street/women/w_s_0_1.jpg",
       "temp": "0도 이하"
     },
     {
       "title": "스타일리시해",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_0_2.jpg",
+      "image": "./img/street/women/w_s_0_2.jpg",
       "temp": "0도 이하"
     },
     {
       "title": "힙하게 입자",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_0_3.jpg",
+      "image": "./img/street/women/w_s_0_3.jpg",
       "temp": "0도 이하"
     },
     {
       "title": "요즘 힙 감성",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_0_4.jpg",
+      "image": "./img/street/women/w_s_0_4.jpg",
       "temp": "0도 이하"
     },
     {
       "title": "탐나는 코디",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_0_5.jpg",
+      "image": "./img/street/women/w_s_0_5.jpg",
       "temp": "0도 이하"
     },
     {
       "title": "힙하게 즐겨",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_0_6.jpg",
+      "image": "./img/street/women/w_s_0_6.jpg",
       "temp": "0도 이하"
     },
     {
       "title": "탐나는 코디",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_16_1.jpg",
+      "image": "./img/street/women/w_s_16_1.jpg",
       "temp": "1도 이상 6도 이하"
     },
     {
       "title": "힙하게 입자",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_16_2.jpg",
+      "image": "./img/street/women/w_s_16_2.jpg",
       "temp": "1도 이상 6도 이하"
     },
     {
       "title": "스트릿 바이브",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_16_3.jpg",
+      "image": "./img/street/women/w_s_16_3.jpg",
       "temp": "1도 이상 6도 이하"
     },
     {
       "title": "힙하게 즐겨",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_16_4.jpg",
+      "image": "./img/street/women/w_s_16_4.jpg",
       "temp": "1도 이상 6도 이하"
     },
     {
       "title": "요즘 힙 감성",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_16_5.jpg",
+      "image": "./img/street/women/w_s_16_5.jpg",
       "temp": "1도 이상 6도 이하"
     },
     {
       "title": "스타일리시해",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_16_6.jpg",
+      "image": "./img/street/women/w_s_16_6.jpg",
       "temp": "1도 이상 6도 이하"
     },
     {
       "title": "힙하게 즐겨",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_711_1.jpg",
+      "image": "./img/street/women/w_s_711_1.jpg",
       "temp": "7도 이상 11도 이하"
     },
     {
       "title": "탐나는 코디",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_711_2.jpg",
+      "image": "./img/street/women/w_s_711_2.jpg",
       "temp": "7도 이상 11도 이하"
     },
     {
       "title": "스타일리시해",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_711_3.jpg",
+      "image": "./img/street/women/w_s_711_3.jpg",
       "temp": "7도 이상 11도 이하"
     },
     {
       "title": "힙하게 입자",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_711_4.jpg",
+      "image": "./img/street/women/w_s_711_4.jpg",
       "temp": "7도 이상 11도 이하"
     },
     {
       "title": "스트릿 바이브",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_711_5.jpg",
+      "image": "./img/street/women/w_s_711_5.jpg",
       "temp": "7도 이상 11도 이하"
     },
     {
       "title": "요즘 힙 감성",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_711_6.jpg",
+      "image": "./img/street/women/w_s_711_6.jpg",
       "temp": "7도 이상 11도 이하"
     },
     {
       "title": "요즘 힙 감성",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_1216_1.jpg",
+      "image": "./img/street/women/w_s_1216_1.jpg",
       "temp": "12도 이상 16도 이하"
     },
     {
       "title": "스타일리시해",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_1216_2.jpg",
+      "image": "./img/street/women/w_s_1216_2.jpg",
       "temp": "12도 이상 16도 이하"
     },
     {
       "title": "힙하게 즐겨",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_1216_3.jpg",
+      "image": "./img/street/women/w_s_1216_3.jpg",
       "temp": "12도 이상 16도 이하"
     },
     {
       "title": "스트릿 바이브",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_1216_4.jpg",
+      "image": "./img/street/women/w_s_1216_4.jpg",
       "temp": "12도 이상 16도 이하"
     },
     {
       "title": "탐나는 코디",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_1216_5.jpg",
+      "image": "./img/street/women/w_s_1216_5.jpg",
       "temp": "12도 이상 16도 이하"
     },
     {
       "title": "힙하게 입자",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_1216_6.jpg",
+      "image": "./img/street/women/w_s_1216_6.jpg",
       "temp": "12도 이상 16도 이하"
     },
     {
       "title": "힙하게 입자",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_1722_1.jpg",
+      "image": "./img/street/women/w_s_1722_1.jpg",
       "temp": "17도 이상 22도 이하"
     },
     {
       "title": "힙하게 즐겨",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_1722_2.jpg",
+      "image": "./img/street/women/w_s_1722_2.jpg",
       "temp": "17도 이상 22도 이하"
     },
     {
       "title": "요즘 힙 감성",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_1722_3.jpg",
+      "image": "./img/street/women/w_s_1722_3.jpg",
       "temp": "17도 이상 22도 이하"
     },
     {
       "title": "탐나는 코디",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_1722_4.jpg",
+      "image": "./img/street/women/w_s_1722_4.jpg",
       "temp": "17도 이상 22도 이하"
     },
     {
       "title": "스타일리시해",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_1722_5.jpg",
+      "image": "./img/street/women/w_s_1722_5.jpg",
       "temp": "17도 이상 22도 이하"
     },
     {
       "title": "스트릿 바이브",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_1722_6.jpg",
+      "image": "./img/street/women/w_s_1722_6.jpg",
       "temp": "17도 이상 22도 이하"
     },
     {
       "title": "힙하게 즐겨",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_2327_1.jpg",
+      "image": "./img/street/women/w_s_2327_1.jpg",
       "temp": "23도 이상 27도 이하"
     },
     {
       "title": "스트릿 바이브",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_2327_2.jpg",
+      "image": "./img/street/women/w_s_2327_2.jpg",
       "temp": "23도 이상 27도 이하"
     },
     {
       "title": "힙하게 입자",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_2327_3.jpg",
+      "image": "./img/street/women/w_s_2327_3.jpg",
       "temp": "23도 이상 27도 이하"
     },
     {
       "title": "스타일리시해",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_2327_4.jpg",
+      "image": "./img/street/women/w_s_2327_4.jpg",
       "temp": "23도 이상 27도 이하"
     },
     {
       "title": "요즘 힙 감성",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_2327_5.jpg",
+      "image": "./img/street/women/w_s_2327_5.jpg",
       "temp": "23도 이상 27도 이하"
     },
     {
       "title": "탐나는 코디",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_2327_6.jpg",
+      "image": "./img/street/women/w_s_2327_6.jpg",
       "temp": "23도 이상 27도 이하"
     },
     {
       "title": "스트릿 바이브",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_28_1.jpg",
+      "image": "./img/street/women/w_s_28_1.jpg",
       "temp": "28도 이상"
     },
     {
       "title": "힙하게 즐겨",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_28_2.jpg",
+      "image": "./img/street/women/w_s_28_2.jpg",
       "temp": "28도 이상"
     },
     {
       "title": "요즘 힙 감성",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_28_3.jpg",
+      "image": "./img/street/women/w_s_28_3.jpg",
       "temp": "28도 이상"
     },
     {
       "title": "탐나는 코디",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_28_4.jpg",
+      "image": "./img/street/women/w_s_28_4.jpg",
       "temp": "28도 이상"
     },
     {
       "title": "힙하게 입자",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_28_5.jpg",
+      "image": "./img/street/women/w_s_28_5.jpg",
       "temp": "28도 이상"
     },
     {
       "title": "스타일리시해",
       "lookStyle": "street",
       "gender": "female",
-      "image": "./img/street/women/s_28_6.jpg",
+      "image": "./img/street/women/w_s_28_6.jpg",
       "temp": "28도 이상"
     },
     {
