@@ -676,6 +676,7 @@ body #gradient2 {
   body .mainBox .weatherBox .weatherBox_secondText {
     width: 30px;
     height: 30px;
+    display: block;
   }
   body .mainBox .weatherBox .weatherBox_secondText p {
     width: 30px;
