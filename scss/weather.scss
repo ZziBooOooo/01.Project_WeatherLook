@@ -14,7 +14,8 @@
       margin: 65px 20px;
       background-color: transparent;
       border: none;
-      cursor: pointer;
+      cursor: none;
+      z-index: 10;
       color: rgb(150, 150, 150);
       transition: 0.3s;
 
