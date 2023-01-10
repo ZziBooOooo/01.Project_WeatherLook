@@ -22,7 +22,7 @@ for (const key in styleList) {
   console.log(img_src);
   //detailImgArr[key].src = `../img/Cody${img_src}`;
 
-  swiperWrapper.innerHTML += ` <div class="swiper-slide">
+  swiperWrapper.innerHTML += `<div class="swiper-slide">
     <img src="../img/Cody${img_src}" id=${key} alt="">
     </div>`;
 }
