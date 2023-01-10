@@ -57,11 +57,12 @@ imgArr.forEach((img) => {
       arr.push(foundPos);
       pos = foundPos + 1;
     }
+    console.log(arr);
     // let test = imgSrc.slice(arr[4]); -  로컬용
     let test = imgSrc.slice(arr[6]); //  - 깃허브용
 
     StyleimgsBoxleft.innerHTML = ` <div class="swiper-slide">
-    <img src="../img/Cody/${test}" alt="" >
+    <img src="../img/Cody${test}" alt="" >
     </div>`;
 
     styleList.forEach((list, key) => {
