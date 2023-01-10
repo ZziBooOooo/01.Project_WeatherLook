@@ -1,3 +1,5 @@
+@import "./scss/_variable.scss";
+
 body {
   margin: 0;
   height: 100vh;
@@ -355,5 +357,42 @@ body {
 
   to {
     transform: scaleX(100%);
+  }
+}
+
+@include mobile {
+  .FirstTyping {
+    font-size: 50px;
+  }
+  .SecondTyping {
+    font-size: 50px;
+  }
+  #logoBox {
+    .textLogo1 {
+      width: 300px;
+    }
+    .textLogo2 {
+      width: 200px;
+    }
+  }
+  .icon2 {
+    width: 70%;
+    height: 200px;
+    transform: translate(-55%, 70%);
+    img {
+      width: 100%;
+    }
+  }
+  .icon3 {
+    width: 70%;
+    transform: translate(-55%, -90%) rotate(25deg);
+  }
+  .icon4 {
+    width: 70%;
+    transform: translate(55%, -90%) rotate(370deg);
+  }
+  .icon5 {
+    width: 70%;
+    transform: translate(55%, 70%);
   }
 }

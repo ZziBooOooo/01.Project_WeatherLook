@@ -48,6 +48,7 @@ console.log(imgArr);
 imgArr.forEach((img) => {
   img.addEventListener("click", (e) => {
     imgSrc = img.src;
+    console.log(imgSrc);
     let arr = [];
     let searchvalue = "/";
     let pos = 0;
@@ -59,7 +60,7 @@ imgArr.forEach((img) => {
     }
     console.log(arr);
     // let test = imgSrc.slice(arr[4]); -  로컬용
-    let test = imgSrc.slice(arr[6]); //  - 깃허브용
+    let test = imgSrc.slice(arr[5]); //  - 깃허브용
 
     StyleimgsBoxleft.innerHTML = ` <div class="swiper-slide">
     <img src="../img/Cody${test}" alt="" >
