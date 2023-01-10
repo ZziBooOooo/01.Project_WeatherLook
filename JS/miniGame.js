@@ -1,7 +1,7 @@
 const cards = document.querySelectorAll(".card");
 const refreshBtn = document.querySelector("#popupBox button");
 
-let maxTime = 2;
+let maxTime = 25;
 let matched = 0;
 let cardOne, cardTwo, timer;
 let disableDeck = false;
