@@ -251,7 +251,8 @@ body #gradient2 {
 }
 .mainBox .weatherBox .weatherBox_secondText p {
   margin: 0;
-  width: 40px;
+  margin-right: 5px;
+  width: 30px;
   transform: translateX(-3px);
 }
 .mainBox .weatherBox .weatherBox_secondText p img {
@@ -265,7 +266,7 @@ body #gradient2 {
   /* font-weight: bold; */
 }
 .mainBox .weatherBox .weatherBox_secondText #region {
-  margin-right: 3px;
+  margin-right: 4px;
 }
 .mainBox .bottomBox {
   display: flex;

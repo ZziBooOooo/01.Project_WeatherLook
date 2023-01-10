@@ -96,9 +96,11 @@ body .mainBox #main_Sec1 .wrapper #popupBox {
 }
 body .mainBox #main_Sec1 .wrapper #popupBox #resultText {
   font-size: 24px;
+  font-weight: bold;
 }
 body .mainBox #main_Sec1 .wrapper #popupBox button {
   background-color: rgb(248, 108, 185);
+  box-shadow: 1px 2px 3px rgb(65, 65, 65);
   border: none;
   padding: 15px;
   border-radius: 8px;

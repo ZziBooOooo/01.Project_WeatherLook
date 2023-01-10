@@ -1,7 +1,7 @@
 const cards = document.querySelectorAll(".card");
 const refreshBtn = document.querySelector("#popupBox button");
 
-let maxTime = 20;
+let maxTime = 2;
 let matched = 0;
 let cardOne, cardTwo, timer;
 let disableDeck = false;
@@ -18,10 +18,10 @@ function initTimer() {
 }
 function stopGame(matched) {
   console.log("test");
-  resultText.textContent = `You Lose!😢 `;
+  resultText.textContent = `You Lose! 😢 `;
   popupBox.classList.add("active");
   if (matched == 6) {
-    resultText.textContent = `You Win!😊 `;
+    resultText.textContent = `You Win! 😊 `;
   }
 }
 
