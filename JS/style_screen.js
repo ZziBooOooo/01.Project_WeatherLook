@@ -116,6 +116,7 @@ function setImage() {
   for (const key in styleList) {
     console.log(key);
     let img_src = styleList[key].image.slice(5);
+    console.log(img_src);
     imgArray[key][0].src = `../img/Cody${img_src}`;
     imgArray[key][1].src = `../img/Cody${img_src}`;
   }
