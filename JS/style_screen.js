@@ -29,9 +29,7 @@ getSliderList();
 
 const slider = document.querySelectorAll(".js-slider")[0];
 const sliderWidth = slider.offsetWidth;
-
 const sumIsLargerThanSlider = sliderWidth >= widthWrap + sliderWidth;
-
 const iterationItems = Math.ceil((widthWrap + sliderWidth) / sliderWidth);
 
 // we clone number of slider we need
@@ -156,6 +154,7 @@ function setClickImage(id) {
 window.addEventListener("load", () => {
   setImage();
   start();
+  setStyleText();
 });
 
 function getTime() {
@@ -173,3 +172,8 @@ setInterval(getTime, 1000);
 
 const mainBox = document.querySelector(".mainBox");
 mainBox.style.opacity = 1;
+
+function setStyleText() {
+  let lookStyleText = styleList[0].lookStyle.toUpperCase();
+  lookStlyeTitle.textContent = lookStyleText;
+}

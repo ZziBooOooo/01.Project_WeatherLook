@@ -629,7 +629,7 @@ body {
         right: 0;
         margin-top: 67.5px;
         margin-right: 19px;
-        background: linear-gradient(rgb(152, 218, 248), rgb(253, 253, 169));
+        background: linear-gradient(rgb(253, 138, 148), rgb(253, 253, 169));
       }
 
       .weatherBox {
@@ -639,7 +639,7 @@ body {
         height: 40px;
         border-radius: 50%;
         background: none;
-        background-color: rgb(247, 247, 247);
+        background-color: rgb(255, 159, 159);
 
         transition: 0.1s;
         z-index: 200;
@@ -649,14 +649,21 @@ body {
         }
 
         .weatherBox_secondText {
+          width: 30px;
+          height: 30px;
           p {
+            width: 30px;
+            height: 30px;
+            // background-color: red;
+            transform: translateX(-5px);
             img {
-              // filter: invert(0);
+              // filter: invert(100);
+              width: 100%;
             }
           }
         }
         &:hover {
-          background: rgb(180, 238, 235);
+          background: transparent;
         }
 
         .clickText {
