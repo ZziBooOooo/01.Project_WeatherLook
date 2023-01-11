@@ -170,3 +170,12 @@ contenti.addEventListener("mouseleave", () => {
   //sns.style.display = 'none';
   sns.style.visibility = "hidden";
 });
+
+window.addEventListener("load", () => {
+  setStyleText();
+});
+
+function setStyleText() {
+  let lookStyleText = styleList[0].lookStyle.toUpperCase();
+  d_styleText.textContent = `${lookStyleText} STYLE`;
+}
