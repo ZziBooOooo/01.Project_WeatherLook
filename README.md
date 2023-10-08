@@ -1,4 +1,4 @@
-# PORTFOLIO 🙋‍♀️
+# WEATHERLOOK 🌞
 ![1](https://github.com/ZziBooOooo/01.Project_WeatherLook/assets/107842817/9c5e2b2c-8980-4726-a574-c669e0d996bb)
 
 
